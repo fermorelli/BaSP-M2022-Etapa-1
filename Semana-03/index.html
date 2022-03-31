@@ -7,9 +7,12 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <title>
-            Trackgenix
+            Trackgenix SA
         </title>
     </head>
     <body>
@@ -20,7 +23,7 @@
                     <button>
                         Log In
                     </button>
-                    <button>
+                    <button id="button-2">
                         Sign Up
                     </button>
                 </div>
@@ -34,18 +37,21 @@
                         Homepage
                     </a>
                     <a href="#features">
-                        Generic
+                        Features
+                    </a>
+                    <a href="#why-trackgenix">
+                        Why Trackgenix?
                     </a>
                     <a href="#contact-us">
                         Contact Us
                     </a>
                 </div>
             </div>
-            <div class="getTouch">
+            <div class="get-touch">
                 <span class="titles">
                     Get in touch
                 </span>
-                <div class="contactInfo">
+                <div class="contact-info">
                     <div class="icon-link">
                         <img src="assets/icons/envelope-solid.svg" alt="mail" height="15px" width="15px">
                         <span>
@@ -74,62 +80,80 @@
                 </h1>
             </header>
             <section id="home">
-                <h2>
-                    What is Trackgenix
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, distinctio. Ipsam ad nostrum totam
-                    pariatur ipsa laborum unde libero assumenda reprehenderit quos. Perferendis debitis corporis
-                    voluptates ratione. Modi, aut nobis?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, distinctio. Ipsam ad nostrum totam
-                    pariatur ipsa laborum unde libero assumenda reprehenderit quos. Perferendis debitis corporis
-                    voluptates ratione. Modi, aut nobis?
-                </p>
-                <img src="assets/img/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg" alt="Office area">
-                <img src="assets/img/austin-distel-wD1LRb9OeEo-unsplash.jpg" alt="Work team reunion">
-                <h2>
-                    Our History
-                </h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis reiciendis maxime
-                    dolores omnis, ut ducimus debitis autem, soluta temporibus sapiente eveniet non adipisci. Eum
-                    reiciendis temporibus numquam. Alias, deleniti!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis reiciendis maxime
-                    dolores omnis, ut ducimus debitis autem, soluta temporibus sapiente eveniet non adipisci. Eum
-                    reiciendis temporibus numquam. Alias, deleniti!
-                </p>
-                <button>
-                    Learn More
-                </button>
+                <div class="article-1">
+                    <div class="article-1-body">
+                        <h2>
+                            What is Trackgenix
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, distinctio. Ipsam ad nostrum totam
+                            pariatur ipsa laborum unde libero assumenda reprehenderit quos. Perferendis debitis corporis
+                            voluptates ratione. Modi, aut nobis?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, distinctio. Ipsam ad nostrum totam
+                            pariatur ipsa laborum unde libero assumenda reprehenderit quos. Perferendis debitis corporis
+                            voluptates ratione. Modi, aut nobis?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, distinctio. Ipsam ad nostrum totam
+                            pariatur ipsa laborum unde libero assumenda reprehenderit quos. Perferendis debitis corporis
+                            voluptates ratione. Modi, aut nobis?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, distinctio. Ipsam ad nostrum totam
+                            pariatur ipsa laborum unde libero assumenda reprehenderit quos. Perferendis debitis corporis
+                            voluptates ratione. Modi, aut nobis?
+                        </p>
+                    </div>
+                    <img src="assets/img/office-2.jpg" alt="Our software" id="img-1" width="685" height="418">
+                </div>
+                <div class="article-2">
+                    <img src="assets/img/office-1.jpg" alt="Work team reunion" id="img-2" width="580" height="288">
+                    <div class="article-2-body">
+                        <h2>
+                            Our History
+                        </h2>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis reiciendis maxime
+                            dolores omnis, ut ducimus debitis autem, soluta temporibus sapiente eveniet non adipisci. Eum
+                            reiciendis temporibus numquam. Alias, deleniti!
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis reiciendis maxime
+                            dolores omnis, ut ducimus debitis autem, soluta temporibus sapiente eveniet non adipisci. Eum
+                            reiciendis temporibus numquam. Alias, deleniti!
+                        </p>
+                        <button>
+                            Learn more
+                        </button>
+                    </div>
+                </div>
             </section>
-            <section id="features">
+            <section id="features" class="features">
                 <h2>
                     Features
                 </h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque neque dolorem natus magnam odit
                     illo amet fugiat ad? In labore unde odit exercitationem ratione impedit incidunt quam ipsam
+                    aperiam.Molestias!. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque neque dolorem natus magnam odit
+                    illo amet fugiat ad? In labore unde odit exercitationem ratione impedit incidunt quam ipsam
                     aperiam.Molestias!
                 </p>
                 <ul>
                     <li>
-                        Item 1: lorem ipsum is simply dummy text of the printin
+                        <strong>Item 1:</strong> lorem ipsum is simply dummy text of the printin
                     </li>
                     <li>
-                        Item 2: lorem ipsum is simply dummy text of the printin
+                        <strong>Item 2:</strong> lorem ipsum is simply dummy text of the printin
                     </li>
                     <li>
-                        Item 3: lorem ipsum is simply dummy text of the printin
+                        <strong>Item 3:</strong> lorem ipsum is simply dummy text of the printin
                     </li>
                     <li>
-                        Item 4: lorem ipsum is simply dummy text of the printin
+                        <strong>Item 4:</strong> lorem ipsum is simply dummy text of the printin
                     </li>
                     <li>
-                        Item 5: lorem ipsum is simply dummy text of the printin
+                        <strong>Item 5:</strong> lorem ipsum is simply dummy text of the printin
                     </li>
                 </ul>
             </section>
-            <section id="trackgenix">
+            <section id="why-trackgenix" class="why-trackgenix">
                 <h2>
                     Why Trackgenix?
                 </h2>
@@ -182,7 +206,7 @@
                 </button>
                 <img src="assets/img/thisisengineering-raeng-64YrPKiguAE-unsplash.jpg" alt="Our software in display">
             </section>
-            <section id="contact-us">
+            <section id="contact-us" class="contact-us">
                 <h2>
                     Contact Us
                 </h2>
