@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    width:  15vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: lightgray;
+}
+
+.inputButtons{
+    box-sizing: border-box;
+    margin-top: 2em;
+}
+
+nav div input{
+    margin-left: 1em;
+    margin-bottom: 1em;
+    padding-left: 5px;
+    width: 13vw;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+    color: lightgray;
+}
+
+.buttons{
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: center;
+}
+
+.buttons button{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em;
+}
+
+.titles{
+    margin: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu{
+    margin-left: 1em;
+    position: absolute;
+    top: 200px;
+}
+
+.links{
+    margin: 2em 1em 0 2em;
+}
+
+.links a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-top: 1em;
+}
+
+.getTouch{
+    margin-bottom: 4em;
+    margin-left: 1em;
+    position: absolute;
+    bottom: 20px;
+}
+
+.contactInfo{
+    margin: 2em;
+    font-size: 0.8em;
+}
+
+.icon-link{
+    display: block;
+    padding: 5px;
+}
+
+.all-main{
+    margin-left: 17vw;
+    margin-top: 4em;
+}
