@@ -1,4 +1,7 @@
 body{
+    position: relative;
+    max-width: 100%;
+    overflow-x: hidden;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -27,6 +30,19 @@ header{
 
 button:active{
     transform: scale(1.1);
+}
+
+footer{
+    width: 1630px;
+    height: 10px;
+    margin-left: 290px;
+    position: relative;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+footer img{
+    padding: 5px;
 }
 
 
@@ -203,6 +219,10 @@ button:active{
     padding: 5px;
 }
 
+.contact-us{
+    margin-bottom: 450px;
+}
+
 .contact-us form{
     width: 600px;
 }
@@ -229,4 +249,41 @@ button:active{
     text-decoration: none;
     font-size: 12px;
     font-weight: medium;
+}
+
+.ordered-lists{
+    position: absolute;
+    width: 1630px;
+    left: 290px;
+    bottom: 25px;
+    background-color: rgb(55,56,103);
+    height: 300px;
+    color: white;
+}
+
+.ordered-lists h3{
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-left: 25px;
+    padding: 25px 0 0 25px;
+}
+
+.products, .company, .support{
+    display: block;
+    position: relative;
+    width: 200px;
+}
+
+.products{
+    left: 450px;
+}
+
+.company{
+    left: 750px;
+    bottom: 140px;
+}
+
+.support{
+    left: 1050px;
+    bottom: 280px;
 }
