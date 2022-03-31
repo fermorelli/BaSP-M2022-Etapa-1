@@ -29,6 +29,7 @@ button:active{
     transform: scale(1.1);
 }
 
+
 .sidebar{
     position: fixed;
     width:  290px;
@@ -200,4 +201,32 @@ button:active{
 
 .features ul li{
     padding: 5px;
+}
+
+.contact-us form{
+    width: 600px;
+}
+
+.contact-us input, select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(55,56,103);
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.contact-us button{
+    width: 100px;
+    height: 35px;
+    display: inline-block;
+    padding: 5px 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(170, 206, 155, 1);
+    color: rgb(55,56,103);
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: medium;
 }
