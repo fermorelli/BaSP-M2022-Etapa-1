@@ -1,3 +1,8 @@
+html{
+    width: 1440px;
+    height: 1024px;
+}
+
 body{
     position: relative;
     max-width: 100%;
@@ -5,7 +10,7 @@ body{
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    color: rgb(55,56,103);    
+    color: rgb(55,56,103);
 }
 
 nav div input{
@@ -16,7 +21,7 @@ nav div input{
     padding-left: 10px;
     border: none;
     border-radius: 5px;
-    color: lightgray;
+    color: rgba(177, 178, 182, 0.2);
 }
 
 header{
@@ -38,7 +43,6 @@ footer{
     margin-left: 290px;
     position: relative;
     text-align: center;
-    padding-bottom: 10px;
 }
 
 footer img{
@@ -60,7 +64,7 @@ footer img{
     top: 38px;
 }
 
-.inputButtons{
+.input-buttons{
     margin-top: 30px;
 }
 
@@ -101,9 +105,9 @@ footer img{
 }
 
 .menu{
-    position: absolute;
+    position: relative;
     margin-left: 15px;
-    top: 200px;
+    top: 150px;
 }
 
 .links{
@@ -118,10 +122,10 @@ footer img{
 }
 
 .get-touch{
-    position: absolute;
+    position: relative;
     margin-bottom: 60px;
     margin-left: 15px;
-    bottom: 20px;
+    top: 350px;
 }
 
 .contact-info{
@@ -236,7 +240,7 @@ footer img{
     padding: 5px;
 }
 
-.features ul li strong{
+.features ul li span{
     font-weight: bold;
 }
 
@@ -323,7 +327,7 @@ footer img{
 
 .contact-us{
     margin-top: 200px;
-    margin-bottom: 450px;
+    margin-bottom: 100px;
 }
 
 .contact-us form{
@@ -353,13 +357,14 @@ footer img{
 /*ordered lists*/
 
 .ordered-lists{
-    position: absolute;
+    position: relative;
     width: 1150px;
-    left: 304px;
+    left: -46px;
     bottom: 25px;
     background-color: rgba(55,56,103,0.9);
-    height: 300px;
+    height: 280px;
     color: white;
+    margin-bottom: 0px;
 }
 
 .ordered-lists h3{
@@ -367,7 +372,7 @@ footer img{
     font-size: 32px;
     font-weight: bold;
     margin: 40px 0 0 50px;
-    padding: 25px 0 0 25px;
+    padding: 50px 0 0 0px;
 }
 
 .ordered-lists li:hover{
@@ -388,14 +393,15 @@ footer img{
 
 .products{
     left: 400px;
+    top: 50px;
 }
 
 .company{
     left: 600px;
-    bottom: 116px;
+    bottom: 60px;
 }
 
 .support{
     left: 800px;
-    bottom: 228px;
+    bottom: 170px;
 }
