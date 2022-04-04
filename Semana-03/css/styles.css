@@ -223,6 +223,7 @@ footer img{
 
 .features h2, .why-trackgenix h2, .contact-us h2{
     display: inline-block;
+    width: 1024px;
     padding-bottom: 10px;
     border-bottom: 4px solid rgb(55,56,103);
     font-size: 30px;
