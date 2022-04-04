@@ -5,12 +5,12 @@ html{
 
 body{
     position: relative;
-    max-width: 100%;
-    overflow-x: hidden;
-    margin: 0;
     box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     color: rgb(55,56,103);
+    overflow-x: hidden;
 }
 
 nav div input{
@@ -26,7 +26,7 @@ nav div input{
 
 header{
     width: 1024px;
-    height: 100px;
+    height: 90px;
     font-size: 60px;
     color: rgb(55,56,103);
     font-weight: bold;
@@ -38,10 +38,11 @@ button:active{
 }
 
 footer{
-    width: 1024px;
-    height: 10px;
-    margin-left: 290px;
-    position: relative;
+    width: 1137px;
+    height: 50px;
+    margin-left: 303px;
+    margin-top: -25px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -59,9 +60,8 @@ footer img{
 }
 
 #glass{
-    position: absolute;
-    left: 250px;
-    top: 38px;
+    position: relative;
+    left: -30px;
 }
 
 .input-buttons{
@@ -76,9 +76,9 @@ footer img{
 }
 
 .buttons button{
+    display: inline-block;
     width: 100px;
     height: 35px;
-    display: inline-block;
     padding: 10px 14px;
     border: none;
     border-radius: 10px;
@@ -100,14 +100,14 @@ footer img{
     width: 220px;
     margin: 15px;
     padding-bottom: 10px;
-    text-transform: uppercase;
     border-bottom: 2px solid rgb(73,163,123);
+    text-transform: uppercase;
 }
 
 .menu{
     position: relative;
     margin-left: 15px;
-    top: 150px;
+    top: 50px;
 }
 
 .links{
@@ -118,7 +118,7 @@ footer img{
     display: block;
     padding-top: 15px;
     text-decoration: none;
-    color: black;
+    color: rgb(55,56,103)
 }
 
 .get-touch{
@@ -162,8 +162,13 @@ footer img{
     top: 25px;
 }
 
-.article-1 p, .article-2 p{
-    width: 420px;
+.article-1 p{
+    width: 428px;
+    padding-top: 15px;
+}
+
+.article-2 p{
+    width: 513px;
     padding-top: 15px;
 }
 
@@ -194,9 +199,9 @@ footer img{
 }
 
 .article-2-body button, .why-trackgenix button, .contact-us button{
+    display: inline-block;
     width: 100px;
     height: 35px;
-    display: inline-block;
     padding: 5px 14px;
     margin-top: 25px;
     border: none;
@@ -217,12 +222,12 @@ footer img{
 /*features*/
 
 .features h2, .why-trackgenix h2, .contact-us h2{
+    display: inline-block;
     padding-bottom: 10px;
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 1024px;
     border-bottom: 4px solid rgb(55,56,103);
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase
 }
 
 .features p{
@@ -242,6 +247,7 @@ footer img{
 
 .features ul li span{
     font-weight: bold;
+    font-size: 20px;
 }
 
 /*why-trackgenix*/
@@ -260,24 +266,24 @@ footer img{
 }
 
 .why-trackgenix h3{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .article-03, .article-04, .article-05, .article-06{
     position: relative;
     display: block;
+    box-sizing: border-box;
     width: 1024px;
-    height: 275px;
+    height: 250px;
     margin-top: 25px;
     margin-bottom: 50px;
-    box-sizing: border-box;
     border-bottom: 1px solid black;
 }
 
 .article-03{
     top: 25px;
-    padding-left: 50px;
+    padding-left: 100px;  
 }
 
 .article-04{
@@ -298,7 +304,7 @@ footer img{
     position: relative;
     left: 400px;
     width: 350px;
-    bottom: 190px;
+    bottom: 165px;
     padding-left: 100px;
     text-align: center;
 }
@@ -306,7 +312,7 @@ footer img{
 .article-04 img, .article-06 img{
     position: relative;
     left: 550px;
-    bottom: 230px;
+    bottom: 180px;
 }
 
 .article-04-body, .article-06-body{
@@ -338,10 +344,10 @@ footer img{
 .contact-us input, select, textarea{
     width: 100%;
     padding: 12px;
-    border: 1px solid rgb(55,56,103);
-    border-radius: 4px;
     margin-top: 6px;
     margin-bottom: 16px;
+    border: 1px solid rgb(55,56,103);
+    border-radius: 4px;
     resize: none;
 }
 
@@ -350,29 +356,28 @@ footer img{
 }
 
 #button-4{
-    background-color: rgba(177, 178, 182, 0.6);
     margin-left: 15px;
+    background-color: rgba(177, 178, 182, 0.6);
 }
 
 /*ordered lists*/
 
 .ordered-lists{
     position: relative;
-    width: 1150px;
+    height: 280px;
+    width: 1137px;
     left: -46px;
     bottom: 25px;
-    background-color: rgba(55,56,103,0.9);
-    height: 280px;
+    background-color: rgba(55,56,103,0.8);
     color: white;
-    margin-bottom: 0px;
 }
 
 .ordered-lists h3{
+    margin: 40px 0 0 50px;
+    padding: 50px 0 0 0px;
     text-transform: uppercase;
     font-size: 32px;
     font-weight: bold;
-    margin: 40px 0 0 50px;
-    padding: 50px 0 0 0px;
 }
 
 .ordered-lists li:hover{
@@ -393,15 +398,15 @@ footer img{
 
 .products{
     left: 400px;
-    top: 50px;
+    top: 29px;
 }
 
 .company{
     left: 600px;
-    bottom: 60px;
+    bottom: 80px;
 }
 
 .support{
     left: 800px;
-    bottom: 170px;
+    bottom: 190px;
 }
