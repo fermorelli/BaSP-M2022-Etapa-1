@@ -76,7 +76,6 @@ footer img{
 }
 
 .buttons button{
-    display: inline-block;
     width: 100px;
     height: 35px;
     padding: 10px 14px;
@@ -87,7 +86,6 @@ footer img{
     text-align: center;
     text-decoration: none;
     font-size: 12px;
-    font-weight: medium;
     text-transform: uppercase;
 }
 
@@ -130,7 +128,7 @@ footer img{
 
 .contact-info{
     margin: 10px 15px 0 15px;
-    font-size: 0.8em;
+    font-size: 14px;
 }
 
 .icon-link{
@@ -370,7 +368,7 @@ footer img{
     left: -46px;
     bottom: 25px;
     background-color: rgba(55,56,103,0.8);
-    color: white;
+    color: rgb(255,255,255);
 }
 
 .ordered-lists h3{
