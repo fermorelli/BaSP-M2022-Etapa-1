@@ -1,0 +1,404 @@
+/*
+nav div input{
+    width: 250px;
+    height: 30px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    color: rgba(177, 178, 182, 0.2);
+}
+
+header{
+    width: 1024px;
+    height: 90px;
+    font-size: 60px;
+    color: rgb(55,56,103);
+    font-weight: bold;
+    border-bottom: 5px solid rgb(55,56,103);
+}
+
+button:active{
+    transform: scale(1.1);
+}
+
+footer{
+    width: 1137px;
+    height: 50px;
+    margin-left: 303px;
+    margin-top: -25px;
+    padding: 5px;
+    text-align: center;
+}
+
+footer img{
+    padding: 5px;
+}
+
+
+.sidebar{
+    position: fixed;
+    width:  304px;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(177, 178, 182, 0.6);
+}
+
+#glass{
+    position: relative;
+    left: -30px;
+}
+
+.input-buttons{
+    margin-top: 30px;
+}
+
+.buttons{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.buttons button{
+    width: 100px;
+    height: 35px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(73,163,123);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#button-2{
+    background-color: rgb(55,56,103);
+}
+
+.titles{
+    display: block;
+    width: 220px;
+    margin: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(73,163,123);
+    text-transform: uppercase;
+}
+
+.menu{
+    position: relative;
+    margin-left: 15px;
+    top: 50px;
+}
+
+.links{
+    margin: 20px 15px 0 15px;
+}
+
+.links a{
+    display: block;
+    padding-top: 15px;
+    text-decoration: none;
+    color: rgb(55,56,103)
+}
+
+.get-touch{
+    position: relative;
+    margin-bottom: 60px;
+    margin-left: 15px;
+    top: 350px;
+}
+
+.contact-info{
+    margin: 10px 15px 0 15px;
+    font-size: 14px;
+}
+
+.icon-link{
+    display: block;
+    padding: 5px;
+}
+
+.icon-link span{
+    padding-left: 5px;
+}
+
+/*end of sidebar, beggining of the main section*/
+/*
+.all-main{
+    margin-left: 350px;
+    margin-top: 60px;
+}
+
+/*home section*/
+
+/*
+.article-1{
+    display: block;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.article-1-body{
+    position: relative;
+    top: 25px;
+}
+
+.article-1 p{
+    width: 428px;
+    padding-top: 15px;
+}
+
+.article-2 p{
+    width: 513px;
+    padding-top: 15px;
+}
+
+.article-1 h2, .article-2 h2{
+    font-size: 30px;
+    color: rgb(73,163,123);
+    font-weight: bold;
+}
+
+#img-1{
+    display: block;
+    position: relative;
+    bottom: 250px;
+    left: 500px;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.article-2{
+    height: 250px;
+    margin-bottom: 50px;
+}
+
+.article-2-body{
+    position: relative;
+    left: 500px;
+    bottom: 220px;
+}
+
+.article-2-body button, .why-trackgenix button, .contact-us button{
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    padding: 5px 14px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(170, 206, 155, 1);
+    color: rgb(55,56,103);
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#img-2{
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+/*features*/
+
+/*
+
+.features h2, .why-trackgenix h2, .contact-us h2{
+    display: inline-block;
+    width: 1024px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid rgb(55,56,103);
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.features p{
+    margin-top: 25px;
+    width: 1024px;
+}
+
+.features ul{
+    margin: 50px 50px 50px 100px;
+    list-style-type: square;
+
+}
+
+.features ul li{
+    padding: 5px;
+}
+
+.features ul li span{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*why-trackgenix*/
+
+/*
+.why-trackgenix img{
+    width: 413px;
+    height: 173px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.why-trackgenix p{
+    width: 300px;
+    padding: 15px;
+}
+
+.why-trackgenix h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.article-03, .article-04, .article-05, .article-06{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 1024px;
+    height: 250px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid black;
+}
+
+.article-03{
+    top: 25px;
+    padding-left: 100px;  
+}
+
+.article-04{
+    top: 50px;
+}
+
+.article-05{
+    top: 75px;
+    padding-left: 100px;
+}
+
+.article-06{
+    top: 100px;
+}
+
+.article-03-body, .article-05-body{
+    display: block;
+    position: relative;
+    left: 400px;
+    width: 350px;
+    bottom: 165px;
+    padding-left: 100px;
+    text-align: center;
+}
+
+.article-04 img, .article-06 img{
+    position: relative;
+    left: 550px;
+    bottom: 180px;
+}
+
+.article-04-body, .article-06-body{
+    display: block;
+    position: relative;
+    left: 15px;
+    width: 330px;
+    bottom: 10px;
+    padding-left: 100px;
+    text-align: center;
+}
+
+.why-trackgenix button{
+    margin-top: 0;
+}
+
+/*contact us*/
+/*
+
+.contact-us{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.contact-us form{
+    margin-top: 30px;
+    width: 400px;
+}
+
+.contact-us input, select, textarea{
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(55,56,103);
+    border-radius: 4px;
+    resize: none;
+}
+
+#button-3{
+    width: 125px;
+}
+
+#button-4{
+    margin-left: 15px;
+    background-color: rgba(177, 178, 182, 0.6);
+}
+
+/*ordered lists*/
+
+/*
+.ordered-lists{
+    position: relative;
+    height: 280px;
+    width: 1137px;
+    left: -46px;
+    bottom: 25px;
+    background-color: rgba(55,56,103,0.8);
+    color: rgb(255,255,255);
+}
+
+.ordered-lists h3{
+    margin: 40px 0 0 50px;
+    padding: 50px 0 0 0px;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.ordered-lists li:hover{
+    transform: scale(1.05);
+}
+
+.ordered-lists h4{
+    padding-bottom: 15px;
+    margin-left: -15px;
+    font-weight: bold;
+}
+
+.products, .company, .support{
+    display: block;
+    position: relative;
+    width: 200px;
+}
+
+.products{
+    left: 400px;
+    top: 29px;
+}
+
+.company{
+    left: 600px;
+    bottom: 80px;
+}
+
+.support{
+    left: 800px;
+    bottom: 190px;
+}
+/*

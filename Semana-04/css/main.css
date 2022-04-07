@@ -1,0 +1,206 @@
+body{
+    max-width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(55,56,103);
+    overflow-x: hidden;
+}
+
+nav{
+    display: none;
+}
+
+main button{
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    padding: 5px 14px;
+    margin: 25px 0px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(170, 206, 155, 1);
+    color: rgb(55,56,103);
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px; 
+    font-weight: 500;
+}
+
+main{
+    font-size: 12px;
+}
+
+.article-1, .article-2, header{
+    text-align: center;
+    border: 1px solid blue;
+}
+
+.article-1, .article-2{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px 5px 20px;
+    justify-content: center;
+}
+
+.article-1 img, .article-2 img, .why-trackgenix img{
+    max-width: 100%;
+    object-fit: contain;
+    height: fit-content;
+    margin: 10px 0px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-1 h2, .article-2 h2{
+    padding-bottom: 5px;
+    margin-top: 0px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgba(170, 206, 155, 1);
+    text-transform: uppercase;
+}
+
+.article-1 p{
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+
+.article-1-body, .article-2-body{
+    border: 1px solid red;
+}
+
+.why-trackgenix h2, .contact-us h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(55,56,103);
+    text-transform: uppercase;
+}
+
+.why-trackgenix h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.why-trackgenix, .contact-us{
+    padding: 25px;
+    text-align: center;
+}
+
+.why-trackgenix img{
+    margin-bottom: 20px;
+}
+
+.article-03, .article-04, .article-05, .article-06{
+    border-bottom: 1px solid rgb(55,56,103);
+    margin-bottom: 20px;
+}
+
+.contact-us input, select, textarea{
+    display: block;
+    padding: 6px;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    border: 1px solid rgb(55,56,103);
+    border-radius: 2px;
+    resize: none;
+}
+
+.contact-us form{
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    padding: 25px;
+}
+
+
+@media (min-width:768px){
+    .article-1, .article-2{
+        flex-wrap: nowrap;
+    }
+
+    .article-2 img{
+        order: 1;
+        width: 50%;
+    }
+
+    .article-1-body{
+        text-align: left;
+        padding: 30px 25px 0px 10px;
+    }
+
+    .article-2-body{
+        order: 2;
+        text-align: left;
+        padding: 20px 0px 0px 20px;
+    }
+}
+
+
+
+@media (min-width:1024px){
+
+    nav{
+        position: fixed;
+        display: flex;
+        width: 20vw;
+        height: 100vh;
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 15px;
+        background-color: rgba(177, 178, 182, 0.6);
+    }
+
+    main{
+        margin-left: 22vw;
+        width: 78vw;
+    }
+
+     .article-1, .article-2{
+        flex-wrap: nowrap;
+    }
+
+    .article-2 img{
+        order: 1;
+        width: 50%;
+    }
+
+    .article-1-body{
+        text-align: left;
+        padding: 30px 25px 0px 10px;
+    }
+
+    .article-2-body{
+        order: 2;
+        text-align: left;
+        padding: 20px 0px 0px 20px;
+    }
+
+     /*
+
+    .article-1-body, .article-2-body{
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+    }
+
+    .article-1 h2, .article-2 h2{
+        align-self: flex-start;
+    }
+
+    .article-1 img, .article-2 img{
+
+    }
+
+    .article-1-body p, .article-2-body p{
+        text-align: left;
+    }
+
+    .article-2 button{
+        align-self: center;
+    } */
+
+}
