@@ -6,6 +6,8 @@ body{
     overflow-x: hidden;
 }
 
+/* main section */
+
 nav{
     display: none;
 }
@@ -30,9 +32,10 @@ main{
     font-size: 12px;
 }
 
+/* home section */
+
 .article-1, .article-2, header{
     text-align: center;
-    border: 1px solid blue;
 }
 
 .article-1, .article-2{
@@ -59,7 +62,6 @@ main{
     font-size: 25px;
     font-weight: bold;
     color: rgba(170, 206, 155, 1);
-    text-transform: uppercase;
 }
 
 .article-1 p{
@@ -68,10 +70,12 @@ main{
 }
 
 .article-1-body, .article-2-body{
-    border: 1px solid red;
+
 }
 
-.why-trackgenix h2, .contact-us h2{
+/* why trackgenix */
+
+.why-trackgenix h2, .contact-us h2, .features h2{
     margin-bottom: 20px;
     font-size: 30px;
     font-weight: bold;
@@ -99,6 +103,32 @@ main{
     margin-bottom: 20px;
 }
 
+/* features */
+
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.features h2{
+    width: 80vw;
+}
+
+.features ul{
+    padding-top: 20px;
+    list-style: square;
+}
+
+.features span{
+    font-weight: bold;
+
+}
+
+/* contact us */
+
 .contact-us input, select, textarea{
     display: block;
     padding: 6px;
@@ -116,6 +146,42 @@ main{
     padding: 25px;
 }
 
+#button-3{
+    width: 100px;
+    margin-right: 60px;
+}
+
+#button-4{
+    background-color: rgba(177, 178, 182, 0.6);
+}
+
+/* ordered lists */
+
+.ordered-lists{
+    background-color: rgb(55,56,103);
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.ordered-lists h4{
+    margin-left: -10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.ordered-lists li{
+    padding-top: 5px;
+}
+
+.ordered-lists h3{
+    display: none;
+}
+
+/* media querys */
 
 @media (min-width:768px){
     .article-1, .article-2{
