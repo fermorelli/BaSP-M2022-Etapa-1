@@ -12,7 +12,9 @@ header{
     header{
         text-align: left;
         font-size: 60px;
-        width: 1024px;
+        width: 75vw;
+        padding-top: 20px;
+        margin-left: 20px;
     
     }
 }

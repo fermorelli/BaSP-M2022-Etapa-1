@@ -69,10 +69,6 @@ main{
     padding-bottom: 10px;
 }
 
-.article-1-body, .article-2-body{
-
-}
-
 /* why trackgenix */
 
 .why-trackgenix h2, .contact-us h2, .features h2{
@@ -124,7 +120,6 @@ main{
 
 .features span{
     font-weight: bold;
-
 }
 
 /* contact us */
@@ -182,6 +177,7 @@ main{
 }
 
 /* media querys */
+/*tablet*/
 
 @media (min-width:768px){
     .article-1, .article-2{
@@ -205,14 +201,14 @@ main{
     }
 }
 
-
+/*desktop*/
 
 @media (min-width:1024px){
 
     nav{
         position: fixed;
         display: flex;
-        width: 20vw;
+        width: 22vw;
         height: 100vh;
         box-sizing: border-box;
         flex-direction: column;
@@ -221,9 +217,16 @@ main{
     }
 
     main{
-        margin-left: 22vw;
+        margin-left: 25vw;
         width: 78vw;
+        font-size: 16px;
     }
+
+    .article-1 h2, .article-2 h2{
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+
 
      .article-1, .article-2{
         flex-wrap: nowrap;
@@ -231,42 +234,109 @@ main{
 
     .article-2 img{
         order: 1;
-        width: 50%;
+        width: 45%;
     }
 
     .article-1-body{
         text-align: left;
-        padding: 30px 25px 0px 10px;
+        padding: 25px 20px 0px 10px;
+        width: 40%;
+    }
+
+    .article-1 img{
+        width: 50%;
+        margin-top: 75px;
     }
 
     .article-2-body{
         order: 2;
         text-align: left;
-        padding: 20px 0px 0px 20px;
+        padding: 10px 40px 10px 25px;
+        width: 60%;
     }
 
-     /*
-
-    .article-1-body, .article-2-body{
-        display: flex;
-        flex-direction: column;
-        background-color: red;
-    }
-
-    .article-1 h2, .article-2 h2{
-        align-self: flex-start;
-    }
-
-    .article-1 img, .article-2 img{
-
-    }
-
-    .article-1-body p, .article-2-body p{
+    .features{
         text-align: left;
+        justify-content: flex-start;
     }
 
-    .article-2 button{
+    .features ul{
+        margin-left: 50px;
+    }
+
+    .article-03, .article-04, .article-05, .article-06{
+        display: flex;
+    }
+
+    .article-03-body,
+    .article-04-body,
+    .article-05-body,
+    .article-06-body{
         align-self: center;
-    } */
+        padding: 0px 20px 0px 10px;
+    }
+
+    .article-03-body{
+        order: 2;
+    }
+
+    .article-05-body{
+        order: 6;
+    }
+
+    .why-trackgenix img{
+       max-width: 50%;
+    }
+
+    .contact-us h2, .features h2, .why-trackgenix h2{
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
+    .contact-us form{
+        align-items: flex-start;
+        margin-left: -15px
+    }
+
+    .contact-us input, select, textarea{
+        width: 75%;
+    }
+
+    .form-buttons{
+        text-align: left;
+        margin-left: 15px;
+        margin-top: -15px;
+    }
+
+    #button-3{
+        width: 125px;
+    }
+
+    #button-4{
+        width: 100px;
+        margin-left: -20px;
+    }
+
+    .ordered-lists h3{
+        display: inline;
+        align-self: flex-start;
+        text-transform: uppercase;
+        margin-top: 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .ordered-lists{
+        height: 17vw;
+        width: 78vw;
+        margin-left: -3vw;
+    }
+
+    .ordered-lists div{
+        align-self: center;
+        margin-bottom: 15px;
+        margin-left: -50px;
+    }
+
 
 }
