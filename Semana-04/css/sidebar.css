@@ -38,11 +38,13 @@ nav div input{
 }
 
 .buttons{
-    margin-top: -400px;
+    margin-top: -550px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .buttons button{
-    width: 100px;
+    width: 80px;
     height: 30px;
     padding: 10px 14px;
     border: none;
@@ -64,7 +66,7 @@ nav div input{
 }
 
 .menu{
-    margin-top: -300px;
+    margin-top: -500px;
 }
 
 .links{
@@ -85,4 +87,11 @@ nav div input{
 
 .get-touch div{
     padding-bottom: 5px;
+}
+
+
+@media (max-width:768px){
+    nav{
+        display: none;
+    }
 }
