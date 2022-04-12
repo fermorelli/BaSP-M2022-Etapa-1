@@ -87,14 +87,11 @@ body {
 
 /*desktop*/
 
-@media (max-width:768px) {
+@media (min-width:1024px) {
 
     nav {
-        display: none;
+        display: flex;
     }
-}
-
-@media (min-width:1024px) {
 
     .not-ol {
         width: 75vw;
