@@ -1,403 +1,251 @@
-/*
-nav div input{
-    width: 250px;
-    height: 30px;
-    margin-left: 15px;
-    margin-bottom: 15px;
-    padding-left: 10px;
-    border: none;
-    border-radius: 5px;
-    color: rgba(177, 178, 182, 0.2);
-}
 
-header{
-    width: 1024px;
-    height: 90px;
-    font-size: 60px;
+body {
+    max-width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
     color: rgb(55,56,103);
-    font-weight: bold;
-    border-bottom: 5px solid rgb(55,56,103);
+    overflow-x: hidden;
 }
 
-button:active{
-    transform: scale(1.1);
-}
+/* media querys */
+/*tablet*/
 
-footer{
-    width: 1137px;
-    height: 50px;
-    margin-left: 303px;
-    margin-top: -25px;
-    padding: 5px;
-    text-align: center;
-}
+@media (min-width:768px) {
 
-footer img{
-    padding: 5px;
-}
+    /*home section*/
 
+    .article-1, .article-2 {
+        flex-wrap: nowrap;
+    }
 
-.sidebar{
-    position: fixed;
-    width:  304px;
-    height: 100vh;
-    top: 0;
-    background-color: rgba(177, 178, 182, 0.6);
-}
+    .article-2 img {
+        order: 1;
+        width: 45%;
+    }
 
-#glass{
-    position: relative;
-    left: -30px;
-}
+    .article-1 img {
+        width: 50%;
+    }
 
-.input-buttons{
-    margin-top: 30px;
-}
+    .article-1-body {
+        padding: 30px 25px 0px 10px;
+        text-align: left;
+    }
 
-.buttons{
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 20px;
-    text-align: center;
-}
+    .article-2-body {
+        order: 2;
+        padding: 20px 0px 0px 30px;
+        text-align: left;
+    }
 
-.buttons button{
-    width: 100px;
-    height: 35px;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 10px;
-    background-color: rgb(73,163,123);
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
-}
+    /*features*/
 
-#button-2{
-    background-color: rgb(55,56,103);
-}
+    .features-body {
+        flex-wrap: nowrap;
+    }
 
-.titles{
-    display: block;
-    width: 220px;
-    margin: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid rgb(73,163,123);
-    text-transform: uppercase;
-}
+    .features-body p {
+        width: 50%;
+        padding-right: 40px;
+    }
 
-.menu{
-    position: relative;
-    margin-left: 15px;
-    top: 50px;
-}
+    /*why trackgenix*/
 
-.links{
-    margin: 20px 15px 0 15px;
-}
+    .article-03, .article-04, .article-05, .article-06 {
+        display: flex;
+        justify-content: space-between;
+    }
 
-.links a{
-    display: block;
-    padding-top: 15px;
-    text-decoration: none;
-    color: rgb(55,56,103)
-}
+    .article-03-body,
+    .article-04-body,
+    .article-05-body,
+    .article-06-body {
+        align-self: center;
+        width: 100%;
+    }
 
-.get-touch{
-    position: relative;
-    margin-bottom: 60px;
-    margin-left: 15px;
-    top: 350px;
-}
+    .article-03-body {
+        order: 2;
+        padding-left: 20px;
+    }
 
-.contact-info{
-    margin: 10px 15px 0 15px;
-    font-size: 14px;
-}
+    .article-04-body, .article-06-body {
+        padding-right: 20px;
+    }
 
-.icon-link{
-    display: block;
-    padding: 5px;
-}
+    .article-05-body {
+        order: 6;
+        padding-left: 20px;
+    }
 
-.icon-link span{
-    padding-left: 5px;
-}
+    /*contact us*/
 
-/*end of sidebar, beggining of the main section*/
-/*
-.all-main{
-    margin-left: 350px;
-    margin-top: 60px;
-}
-
-/*home section*/
-
-/*
-.article-1{
-    display: block;
-    height: 400px;
-    margin-top: 50px;
-}
-
-.article-1-body{
-    position: relative;
-    top: 25px;
-}
-
-.article-1 p{
-    width: 428px;
-    padding-top: 15px;
-}
-
-.article-2 p{
-    width: 513px;
-    padding-top: 15px;
-}
-
-.article-1 h2, .article-2 h2{
-    font-size: 30px;
-    color: rgb(73,163,123);
-    font-weight: bold;
-}
-
-#img-1{
-    display: block;
-    position: relative;
-    bottom: 250px;
-    left: 500px;
-    border-radius: 15px;
-    border: 1px solid black;
-}
-
-.article-2{
-    height: 250px;
-    margin-bottom: 50px;
-}
-
-.article-2-body{
-    position: relative;
-    left: 500px;
-    bottom: 220px;
-}
-
-.article-2-body button, .why-trackgenix button, .contact-us button{
-    display: inline-block;
-    width: 100px;
-    height: 35px;
-    padding: 5px 14px;
-    margin-top: 25px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(170, 206, 155, 1);
-    color: rgb(55,56,103);
-    text-align: center;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-#img-2{
-    border-radius: 15px;
-    border: 1px solid black;
-}
-
-/*features*/
-
-/*
-
-.features h2, .why-trackgenix h2, .contact-us h2{
-    display: inline-block;
-    width: 1024px;
-    padding-bottom: 10px;
-    border-bottom: 4px solid rgb(55,56,103);
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: uppercase
-}
-
-.features p{
-    margin-top: 25px;
-    width: 1024px;
-}
-
-.features ul{
-    margin: 50px 50px 50px 100px;
-    list-style-type: square;
+    .contact-us button{
+        transform: scale(1.1);
+    }
 
 }
 
-.features ul li{
-    padding: 5px;
+/*desktop*/
+
+@media (max-width:768px) {
+
+    nav {
+        display: none;
+    }
 }
 
-.features ul li span{
-    font-weight: bold;
-    font-size: 20px;
+@media (min-width:1024px) {
+
+    .not-ol {
+        width: 75vw;
+        margin-left: 25vw;
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    .article-1 h2, .article-2 h2 {
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+
+    .article-2 img {
+        order: 1;
+    }
+
+    .article-1-body {
+        text-align: left;
+    }
+
+    .article-1 img {
+        width: 50%;
+        margin-top: 50px;
+    }
+
+    .article-2-body {
+        order: 2;
+        width: 60%;
+        padding: 0px 40px 10px 25px;
+        text-align: left;
+    }
+
+    .features h2 {
+        width: 70vw;
+    }
+
+    .features-body {
+        flex-wrap: wrap;
+    }
+
+    .features-body p {
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .features ul {
+        margin-left: 50px;
+    }
+
+    /*why-trackgenix*/
+
+    .article-03,
+    .article-04,
+    .article-05,
+    .article-06 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .article-03-body,
+    .article-04-body,
+    .article-05-body,
+    .article-06-body {
+        align-self: center;
+        width: 100%;
+    }
+
+    .article-03-body {
+        order: 2;
+        padding-left: 20px;
+    }
+
+    .article-04-body, .article-06-body {
+        padding-right: 20px;
+    }
+
+    .article-05-body {
+        order: 6;
+        padding-left: 20px;
+    }
+
+    /*contact us*/
+
+    .contact-us form {
+        padding: 20px;
+    }
+
+    .contact-us h2, .features h2, .why-trackgenix h2 {
+        padding-bottom: 10px;
+        text-align: left;
+    }
+
+    .contact-us form {
+        align-items: flex-start;
+        margin-left: -15px
+    }
+
+    .contact-us input, select, textarea {
+        width: 75%;
+    }
+
+    .form-buttons {
+        margin-left: 15px;
+        margin-top: -15px;
+        text-align: left;
+    }
+
+    #button-3 {
+        width: 125px;
+    }
+
+    #button-4 {
+        width: 100px;
+        margin-left: -20px;
+    }
+
+    /*ordered lists*/
+
+    .ordered-lists h3 {
+        display: inline;
+        align-self: flex-start;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .ordered-lists {
+        height: 17vw;
+        width: 78vw;
+        margin-left: 22vw;
+    }
+
+    .ordered-lists div {
+        align-self: center;
+        margin-bottom: 15px;
+        margin-left: -50px;
+        font-size: 16px;
+    }
 }
 
-/*why-trackgenix*/
+@media (min-width:1024px) {
 
-/*
-.why-trackgenix img{
-    width: 413px;
-    height: 173px;
-    object-fit: cover;
-    border: 1px solid black;
-    border-radius: 15px;
-}
-
-.why-trackgenix p{
-    width: 300px;
-    padding: 15px;
-}
-
-.why-trackgenix h3{
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.article-03, .article-04, .article-05, .article-06{
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    width: 1024px;
-    height: 250px;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    border-bottom: 1px solid black;
-}
-
-.article-03{
-    top: 25px;
-    padding-left: 100px;  
-}
-
-.article-04{
-    top: 50px;
-}
-
-.article-05{
-    top: 75px;
-    padding-left: 100px;
-}
-
-.article-06{
-    top: 100px;
-}
-
-.article-03-body, .article-05-body{
-    display: block;
-    position: relative;
-    left: 400px;
-    width: 350px;
-    bottom: 165px;
-    padding-left: 100px;
-    text-align: center;
-}
-
-.article-04 img, .article-06 img{
-    position: relative;
-    left: 550px;
-    bottom: 180px;
-}
-
-.article-04-body, .article-06-body{
-    display: block;
-    position: relative;
-    left: 15px;
-    width: 330px;
-    bottom: 10px;
-    padding-left: 100px;
-    text-align: center;
-}
-
-.why-trackgenix button{
-    margin-top: 0;
-}
-
-/*contact us*/
-/*
-
-.contact-us{
-    margin-top: 200px;
-    margin-bottom: 100px;
-}
-
-.contact-us form{
-    margin-top: 30px;
-    width: 400px;
-}
-
-.contact-us input, select, textarea{
-    width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    border: 1px solid rgb(55,56,103);
-    border-radius: 4px;
-    resize: none;
-}
-
-#button-3{
-    width: 125px;
-}
-
-#button-4{
-    margin-left: 15px;
-    background-color: rgba(177, 178, 182, 0.6);
-}
-
-/*ordered lists*/
-
-/*
-.ordered-lists{
-    position: relative;
-    height: 280px;
-    width: 1137px;
-    left: -46px;
-    bottom: 25px;
-    background-color: rgba(55,56,103,0.8);
-    color: rgb(255,255,255);
-}
-
-.ordered-lists h3{
-    margin: 40px 0 0 50px;
-    padding: 50px 0 0 0px;
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.ordered-lists li:hover{
-    transform: scale(1.05);
-}
-
-.ordered-lists h4{
-    padding-bottom: 15px;
-    margin-left: -15px;
-    font-weight: bold;
-}
-
-.products, .company, .support{
-    display: block;
-    position: relative;
-    width: 200px;
-}
-
-.products{
-    left: 400px;
-    top: 29px;
-}
-
-.company{
-    left: 600px;
-    bottom: 80px;
-}
-
-.support{
-    left: 800px;
-    bottom: 190px;
+    header {
+        width: 70vw;
+        padding-top: 20px;
+        margin-left: 20px;
+        text-align: left;
+        font-size: 60px;
+    }
 }

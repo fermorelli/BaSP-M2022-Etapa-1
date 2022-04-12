@@ -1,20 +1,9 @@
-header{
+header {
     width: 100vw;
     margin-bottom: 5px;
     padding: 10px 0;
+    border-bottom: 3px solid rgb(55,56,103);
     font-size: 40px;
     font-weight: bold;
-    border-bottom: 3px solid rgb(55,56,103);
     text-transform: uppercase;
-}
-
-@media (min-width:1024px){
-    header{
-        text-align: left;
-        font-size: 60px;
-        width: 70vw;
-        padding-top: 20px;
-        margin-left: 20px;
-    
-    }
 }
