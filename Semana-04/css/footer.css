@@ -1,8 +1,7 @@
-footer{
-    display: flex;
-    justify-content: center;
+footer {
+    text-align: center;
 }
 
-footer img{
+footer img {
     padding: 5px;
 }

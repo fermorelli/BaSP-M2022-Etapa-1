@@ -15,4 +15,4 @@
 
 ## Week 04:
 
-    Added a new folder in  the main branch and created different css files, each one corresponding to a different section of the landing page. I also made the necessary changes in the HTML file to make it easier to implement media queries. Now the project is fully responsive and should be viewable from any device.
+    Added a new folder in  the main branch and created different css files, each one corresponding to a different section of the landing page. I also made the necessary changes in the HTML file to make it easier to implement media queries. Now the project is fully responsive and should be viewable from any device. You should be able to see the project visiting this link: https://ilcosme.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html
