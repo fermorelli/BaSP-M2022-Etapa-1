@@ -14,8 +14,8 @@ console.log('Variable 1:', numberOne,',', 'Variable 2:', numberTwo,',', 'Variabl
 
 console.log('-Exercise 1.b:');
 
-var stringOne = 'Hola';
-var stringTwo = 'Mundo';
+var stringOne = 'Hello';
+var stringTwo = 'World';
 var stringThree = stringOne + ' ' + stringTwo;
 
 console.log('Variable 1:', stringOne,',', 'Variable 2:', stringTwo,',', 'Variable 3:', stringThree);
@@ -24,8 +24,8 @@ console.log('Variable 1:', stringOne,',', 'Variable 2:', stringTwo,',', 'Variabl
 
 console.log('-Exercise 1.c:');
 
-var stringFour = 'Magistratura';
-var stringFive = 'Aduana';
+var stringFour = 'magistracy';
+var stringFive = 'beautify';
 var stringSix = stringFour.length + stringFive.length;
 
 console.log('Variable 1:', stringFour,',', 'Variable 2:', stringFive,',', 'Variable 3:', stringSix);
