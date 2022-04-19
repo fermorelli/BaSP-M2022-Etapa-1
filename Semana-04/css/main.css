@@ -33,7 +33,7 @@ main {
 }
 
 .article-1 img, .article-2 img {
-    max-width: 100%;
+    max-width: 80%;
     object-fit: contain;
     height: fit-content;
     margin: 10px auto;
@@ -78,7 +78,7 @@ main {
 .why-trackgenix img {
     object-fit: cover;
     height: 172px;
-    width: 100%;
+    width: 80%;
     margin: 10px auto;
     border: 1px solid black;
     border-radius: 15px;
