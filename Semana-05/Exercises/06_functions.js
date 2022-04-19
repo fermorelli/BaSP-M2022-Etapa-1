@@ -75,4 +75,4 @@ function sumThree(num1, num2){
     return num1+num2;
 }
 
-console.log('Result:', sumThree(80,90.657));
+console.log('Result A:', sumThree(80,90.657),', Result B: ', sumThree(50.4, 'sick'),', Result C: ', sumThree(1.5,6.9));
