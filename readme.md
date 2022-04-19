@@ -19,4 +19,4 @@
 
 ## Week 05:
 
-    In this week assignment I've to make six differents types of JavaScript exercises, and include them in a new folder with a new index file. Then I've to link the differents .js files that I've created to that index file in order to be able to visualiza correctly the exercises made. I have to demonstrate that the content shown in class and in the asynchronous material was understood and that it can be used correctly. Here's the link to visualize this week project: https://ilcosme.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
+    In this week assignment I've to make six differents types of JavaScript exercises, and include them in a new folder with a new index file. Then I've to link the different .js files that I created to that index file to be able to correctly visualize the exercises that I did. I have to demonstrate that the content shown in class and in the asynchronous material was understood and that it can be used correctly. Here's the link to visualize this week project: https://ilcosme.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
