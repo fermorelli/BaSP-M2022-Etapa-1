@@ -1,0 +1,39 @@
+.all{
+    height: 45vh;
+}
+
+.login{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 60%;
+}
+
+.login h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    background-color: rgba(177, 178, 182, 0.6);
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.login-form label{
+    padding: 5px 0;
+}
+
+.login-form button{
+    align-self: center;
+    margin-bottom: 0;
+}

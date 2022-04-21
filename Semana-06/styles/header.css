@@ -1,0 +1,9 @@
+header {
+    width: 100vw;
+    margin-bottom: 5px;
+    padding: 10px 0;
+    border-bottom: 3px solid rgb(55,56,103);
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

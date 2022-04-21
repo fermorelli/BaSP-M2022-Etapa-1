@@ -1,0 +1,233 @@
+body {
+    max-width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(55,56,103);
+    overflow-x: hidden;
+}
+
+/* media querys */
+
+@media (min-width:768px) {
+
+    /*home section*/
+
+    .article-1, .article-2 {
+        flex-wrap: nowrap;
+    }
+
+    .article-2 img {
+        order: 1;
+        width: 45%;
+    }
+
+    .article-1 img {
+        width: 45%;
+    }
+
+    .article-1-body {
+        padding: 30px 25px 0px 10px;
+        text-align: left;
+    }
+
+    .article-2-body {
+        order: 2;
+        padding: 20px 0px 0px 30px;
+        text-align: left;
+    }
+
+    /*features*/
+
+    .features-body {
+        flex-wrap: nowrap;
+    }
+
+    .features-body p {
+        width: 50%;
+        padding-right: 40px;
+    }
+
+    /*why trackgenix*/
+
+    .article-03, .article-04, .article-05, .article-06 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .article-03-body,
+    .article-04-body,
+    .article-05-body,
+    .article-06-body {
+        align-self: center;
+        width: 100%;
+    }
+
+    .article-03-body {
+        order: 2;
+        padding-left: 20px;
+    }
+
+    .article-04-body, .article-06-body {
+        padding-right: 20px;
+    }
+
+    .article-05-body {
+        order: 6;
+        padding-left: 20px;
+    }
+
+    /*contact us*/
+
+    .contact-us button{
+        transform: scale(1.1);
+    }
+
+}
+
+@media (min-width:1024px) {
+
+    header {
+        width: 70vw;
+        padding-top: 20px;
+        margin-left: 20px;
+        text-align: left;
+        font-size: 60px;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    /*main*/
+
+    .not-ol {
+        width: 75vw;
+        margin-left: 25vw;
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    .article-1 h2, .article-2 h2 {
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+
+    .article-2 img {
+        order: 1;
+    }
+
+    .article-1 img {
+        margin-top: 50px;
+    }
+
+    .article-2 {
+        margin-left: 20px;
+    }
+
+    .article-2-body {
+        order: 2;
+        width: 60%;
+        padding: 0px 20px 10px 40px;
+        text-align: left;
+    }
+
+    .features h2 {
+        width: 70vw;
+    }
+
+    .features-body {
+        flex-wrap: wrap;
+    }
+
+    .features-body p {
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .features ul {
+        margin-left: 50px;
+    }
+
+    /*why-trackgenix*/
+
+    .article-03,
+    .article-04,
+    .article-05,
+    .article-06 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .article-03-body,
+    .article-04-body,
+    .article-05-body,
+    .article-06-body {
+        align-self: center;
+        width: 100%;
+    }
+
+    .article-03-body {
+        order: 2;
+        padding-left: 20px;
+    }
+
+    .article-04-body, .article-06-body {
+        padding-right: 20px;
+    }
+
+    .article-05-body {
+        order: 6;
+        padding-left: 20px;
+    }
+
+    /*contact us*/
+
+    .contact-us form {
+        padding: 20px;
+    }
+
+    .contact-us h2, .features h2, .why-trackgenix h2 {
+        padding-bottom: 10px;
+        text-align: left;
+    }
+
+    .contact-us form {
+        align-items: flex-start;
+        margin-left: -15px
+    }
+
+    .contact-us input, select, textarea {
+        width: 75%;
+    }
+
+    .form-buttons {
+        margin-left: 15px;
+        margin-top: -15px;
+        text-align: left;
+    }
+
+    /*ordered lists*/
+
+    .ordered-lists h3 {
+        display: inline;
+        align-self: flex-start;
+        margin-top: 20px;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .ordered-lists {
+        height: 17vw;
+        width: 78vw;
+        margin-left: 22vw;
+    }
+
+    .ordered-lists div {
+        align-self: center;
+        margin-bottom: 15px;
+        margin-left: -50px;
+        font-size: 16px;
+    }
+}
