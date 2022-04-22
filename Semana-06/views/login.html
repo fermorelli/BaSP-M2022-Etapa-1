@@ -90,11 +90,21 @@
                         <h2>log in</h2>
                         <form action="" class="login-form">
                             <label for="mail">Enter your email</label>
-                            <input id="mail" type="email">
+                            <input id="mail" type="text">
+                            <div class="mail-alert"></div>
                             <label for="password">Enter your password</label>
                             <input id="password" type="password">
-                            <button>Log in</button>
+                            <div class="password-alert"></div>
+                            <button id="login-button" type="button">Log in</button>
                         </form>
+                    </div>
+                    <div class="overlay" id="overlay">
+                        <div class="popup">
+                          <div class="CloseIcon"></div>
+                          <span id="mail-checked"></span>
+                          <span id="pass-checked"></span>
+                          <button id="button-6">Back</button>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -178,5 +188,6 @@
                 <img src="../assets/icons/facebook-brands.svg" alt="facebook logo" height="25px" width="25px">
             </a>
         </footer>
+        <script src="../javascript/login.js"></script>
     </body>
 </html>
