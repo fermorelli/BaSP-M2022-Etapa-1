@@ -21,34 +21,57 @@ mail.addEventListener('blur', function(){
 });
 
 mail.addEventListener('focus', function(){
-    alertMail.style.color = 'white';
+    alertMail.classList.remove('negation');
+    alertMail.classList.remove('validation');
+    alertMail.style.color = "white";
 });
 
 password.addEventListener('blur', function(){
-    var passValue = password.value;
-    for (i=0;i<passValue.length; i++){
-        var char = passValue.charAt(i);
-        var charN = char.charCodeAt(0);
-        if ((charN > 47 && charN < 58) || (charN > 64 && cc < 91) || (charN > 96 && charN < 123)){
+        var allowed = '0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+        var numbers = '0123456789';
+        var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+        var passValue = password.value;
+        var isAlphanumeric = true;
+        var justNumbers = true;
+        var justLetters = true;
+
+        passValue.split('').forEach(letter=>{
+            if (allowed.indexOf(letter) == -1) isAlphanumeric = false;
+            if (numbers.indexOf(letter) == -1) justNumbers = false;
+            if (letters.indexOf(letter) == -1) justLetters = false;
+        });
+        if (isAlphanumeric && !justNumbers && !justLetters){
             password.classList.add('validation');
         }else{
-            password.classList.remove('validation');
             password.classList.add('negation');
             alertPass.style.color = 'red';
-            alertPass.innerHTML = '<span>You must enter a valid password format</span>'
+            alertPass.innerHTML = '<span>You must enter a valid password format</span>';
         }
-    }
+});
+
+password.addEventListener('focus', function(){
+    alertPass.classList.remove('negation');
+    alertPass.classList.remove('validation');
+    alertPass.style.color = "white";
 });
 
 button.addEventListener('click', function(){
     var mailValue = mail.value;
     var passValue = password.value;
     document.getElementById('overlay').style.display = 'block';
-    mailChecked.innerHTML = '<span>Mail: </span>' + mailValue;
-    passChecked.innerHTML = '<span>Password: </span>' + passValue;
+    if(mail.classList.contains('validation')){
+        mailChecked.innerHTML = '<span>Mail: </span>' + mailValue;
+    }else if(mail.classList.contains('negation')){
+        mailChecked.innerHTML = '<span>Mail: Incorrect mail format</span>';
+    };
 
-})
+    if(password.classList.contains('validation')){
+        passChecked.innerHTML = '<span>Password: </span>' + passValue;
+    }else if(password.classList.contains('negation')){
+        passChecked.innerHTML = '<span>Password: Incorrect password format</span>';
+    };
+});
 
 button2.addEventListener('click', function(){
     document.getElementById('overlay').style.display = 'none';
-})
+});
