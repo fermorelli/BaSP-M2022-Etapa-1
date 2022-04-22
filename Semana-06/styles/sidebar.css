@@ -24,6 +24,12 @@ nav div input {
     background-color: rgb(55,56,103);
 }
 
+.navigate{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
 .buttons {
     display: flex;
     justify-content: space-evenly;
