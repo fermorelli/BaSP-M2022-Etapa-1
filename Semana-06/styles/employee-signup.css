@@ -40,3 +40,43 @@
 #su-button{
     margin-left: 40%;
 }
+
+.validation{
+    border: 1px solid green;
+}
+
+.negation{
+    border: 1px solid red;
+}
+
+.overlay {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+
+  .popup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 25%;
+    top: 25%;
+    left: 25%;
+    box-sizing: border-box;
+    padding-top: 50px;
+    text-align: center;
+    background: white;
+  }
+ 
+  .popup span {
+    font-size: 15px;
+    height: 50px;
+    color: black;
+  }
