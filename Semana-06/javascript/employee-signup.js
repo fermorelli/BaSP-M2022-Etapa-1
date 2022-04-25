@@ -54,7 +54,7 @@ nameForm.addEventListener('blur', function(){
     var justNumbers = true;
     var justLetters = true;
 
-    nameValue.split('').forEach(letter=>{
+    nameValue.split('').forEach(function(letter){
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
     });
@@ -63,8 +63,14 @@ nameForm.addEventListener('blur', function(){
     }else{
         nameForm.classList.add('negation');
         alertName.style.color = 'red';
-        alertName.innerHTML = '<span>You must enter a valid name format</span>';
+        alertName.innerText = 'You must enter a valid name format';
     }
+});
+
+nameForm.addEventListener('focus', function(){
+    nameForm.classList.remove('negation');
+    nameForm.classList.remove('validation');
+    alertName.innerText = '';
 });
 
 //SURNAME VALIDATION
@@ -76,7 +82,7 @@ surname.addEventListener('blur', function(){
     var justNumbers = true;
     var justLetters = true;
 
-    surnameValue.split('').forEach(letter=>{
+    surnameValue.split('').forEach(function(letter){
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
     });
@@ -85,8 +91,14 @@ surname.addEventListener('blur', function(){
     }else{
         surname.classList.add('negation');
         alertSurname.style.color = 'red';
-        alertSurname.innerHTML = '<span>You must enter a valid surname format</span>';
+        alertSurname.innerText = 'You must enter a valid surname format';
     }
+});
+
+surname.addEventListener('focus', function(){
+    surname.classList.remove('negation');
+    surname.classList.remove('validation');
+    alertSurname.innerText = '';
 });
 
 //DNI VALIDATION
@@ -98,7 +110,7 @@ dni.addEventListener('blur', function(){
     var justNumbers = true;
     var justLetters = true;
 
-    dniValue.split('').forEach(letter=>{
+    dniValue.split('').forEach(function(letter){
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
     });
@@ -107,9 +119,16 @@ dni.addEventListener('blur', function(){
     }else{
         dni.classList.add('negation');
         alertDni.style.color = 'red';
-        alertDni.innerHTML = '<span>You must enter a valid dni format</span>';
+        alertDni.innerText = 'You must enter a valid dni format';
     }
 });
+
+dni.addEventListener('focus', function(){
+    dni.classList.remove('negation');
+    dni.classList.remove('validation');
+    alertDni.innerText = '';
+});
+
 
 //DOB VALIDATION
 
@@ -122,11 +141,17 @@ dob.addEventListener('blur', function(){
     if(dobValue.length !== 10 || dobValue.substring(2,3) !== '/' || dobValue.substring(5,6) !== '/' || day <= 00 || day > 31 || month <= 00 || month > 12 || year < 1910 || year > 2004){
         dob.classList.add('negation');
         alertDob.style.color = 'red';
-        alertDob.innerHTML = '<span>You must enter a valid date format</span>';
+        alertDob.innerText = 'You must enter a valid date format';
     }else{
         dob.classList.add('validation');
     }
-})
+});
+
+dob.addEventListener('focus', function(){
+    dob.classList.remove('negation');
+    dob.classList.remove('validation');
+    alertDob.innerText = '';
+});
 
 //PHONE VALIDATION
 
@@ -137,7 +162,7 @@ phone.addEventListener('blur', function(){
     var justNumbers = true;
     var justLetters = true;
 
-    phoneValue.split('').forEach(letter=>{
+    phoneValue.split('').forEach(function(letter){
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
     });
@@ -146,8 +171,14 @@ phone.addEventListener('blur', function(){
     }else{
         phone.classList.add('negation');
         alertPhone.style.color = 'red';
-        alertPhone.innerHTML = '<span>You must enter a valid phone number</span>';
+        alertPhone.innerText = 'You must enter a valid phone number';
     }
+});
+
+phone.addEventListener('focus', function(){
+    phone.classList.remove('negation');
+    phone.classList.remove('validation');
+    alertPhone.innerText = '';
 });
 
 //ADRESS VALIDATION
@@ -161,7 +192,7 @@ adress.addEventListener('blur', function(){
     var justNumbers = true;
     var justLetters = true;
 
-    adressValue.split('').forEach(letter=>{
+    adressValue.split('').forEach(function(letter){
         if (allowed.indexOf(letter) == -1) isAlphanumeric = false;
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
@@ -171,8 +202,14 @@ adress.addEventListener('blur', function(){
     }else{
         adress.classList.add('negation');
         alertAdress.style.color = 'red';
-        alertAdress.innerHTML = '<span>You must enter a valid adress</span>';
+        alertAdress.innerText = 'You must enter a valid adress';
     }
+});
+
+adress.addEventListener('focus', function(){
+    adress.classList.remove('negation');
+    adress.classList.remove('validation');
+    alertAdress.innerText = '';
 });
 
 //CITY VALIDATION
@@ -186,18 +223,24 @@ city.addEventListener('blur', function(){
     var justNumbers = true;
     var justLetters = true;
 
-    cityValue.split('').forEach(letter=>{
+    cityValue.split('').forEach(function(letter){
         if (allowed.indexOf(letter) == -1) isAlphanumeric = false;
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
     });
-    if (isAlphanumeric && !justNumbers && !justLetters && cityValue.length > 3){
+    if (isAlphanumeric && (!justNumbers || justLetters) && cityValue.length > 3){
         city.classList.add('validation');
     }else{
         city.classList.add('negation');
         alertCity.style.color = 'red';
-        alertCity.innerHTML = '<span>You must enter a valid city format</span>';
+        alertCity.innerText = 'You must enter a valid city format';
     }
+});
+
+city.addEventListener('focus', function(){
+    city.classList.remove('negation');
+    city.classList.remove('validation');
+    alertCity.innerText = '';
 });
 
 //ZIP CODE VALIDATION
@@ -210,7 +253,7 @@ zipCode.addEventListener('blur', function(){
     var justNumbers = true;
     var justLetters = true;
 
-    zipCodeValue.split('').forEach(letter=>{
+    zipCodeValue.split('').forEach(function(letter){
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
     });
@@ -219,8 +262,14 @@ zipCode.addEventListener('blur', function(){
     }else{
         zipCode.classList.add('negation');
         alertZipCode.style.color = 'red';
-        alertZipCode.innerHTML = '<span>You must enter a valid zip code number</span>';
+        alertZipCode.innerText = 'You must enter a valid zip code number';
     }
+});
+
+zipCode.addEventListener('focus', function(){
+    zipCode.classList.remove('negation');
+    zipCode.classList.remove('validation');
+    alertZipCode.innerText = '';
 });
 
 // MAIL VALIDATION
@@ -234,8 +283,14 @@ mail.addEventListener('blur', function(){
         mail.classList.remove('validation');
         mail.classList.add('negation');
         alertMail.style.color = 'red';
-        alertMail.innerHTML = '<span>You must enter a valid email format</span>'
+        alertMail.innerText = 'You must enter a valid email format'
     }
+});
+
+mail.addEventListener('focus', function(){
+    mail.classList.remove('negation');
+    mail.classList.remove('validation');
+    alertMail.innerText = '';
 });
 
 //PASSWORD VALIDATION
@@ -249,7 +304,7 @@ password.addEventListener('blur', function(){
     var justNumbers = true;
     var justLetters = true;
 
-    passValue.split('').forEach(letter=>{
+    passValue.split('').forEach(function(letter){
         if (allowed.indexOf(letter) == -1) isAlphanumeric = false;
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
@@ -259,8 +314,14 @@ password.addEventListener('blur', function(){
     }else{
         password.classList.add('negation');
         alertPass.style.color = 'red';
-        alertPass.innerHTML = '<span>You must enter a valid password format</span>';
+        alertPass.innerText = 'You must enter a valid password format';
     }
+});
+
+password.addEventListener('focus', function(){
+    password.classList.remove('negation');
+    password.classList.remove('validation');
+    alertPass.innerText = '';
 });
 
 //REPEAT PASSWORD VALIDATION
@@ -274,7 +335,7 @@ rePassword.addEventListener('blur', function(){
     var justNumbers = true;
     var justLetters = true;
 
-    rePassValue.split('').forEach(letter=>{
+    rePassValue.split('').forEach(function(letter){
         if (allowed.indexOf(letter) == -1) isAlphanumeric = false;
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
@@ -284,8 +345,14 @@ rePassword.addEventListener('blur', function(){
     }else{
         rePassword.classList.add('negation');
         alertRePass.style.color = 'red';
-        alertRePass.innerHTML = '<span>You must enter a valid password format</span>';
+        alertRePass.innerText = 'You must enter a valid password format';
     }
+});
+
+rePassword.addEventListener('focus', function(){
+    rePassword.classList.remove('negation');
+    rePassword.classList.remove('validation');
+    alertRePass.innerText = '';
 });
 
 //MODAL CODE
@@ -306,69 +373,69 @@ button.addEventListener('click', function(){
     document.getElementById('overlay').style.display = 'block';
 
     if(nameForm.classList.contains('validation')){
-        nameChecked.innerHTML = '<span>Name: </span>' + nameValue;
+        nameChecked.innerText = 'Name: ' + nameValue;
     }else if(nameForm.classList.contains('negation')){
-        nameChecked.innerHTML = '<span>Name: Incorrect name format</span>';
+        nameChecked.innerText = 'Name: Incorrect name format';
     };
 
     if(surname.classList.contains('validation')){
-        surnameChecked.innerHTML = '<span>Surname: </span>' + surnameValue;
+        surnameChecked.innerText = 'Surname: ' + surnameValue;
     }else if(surname.classList.contains('negation')){
-        surnameChecked.innerHTML = '<span>Surname: Incorrect surname format</span>';
+        surnameChecked.innerText = 'Surname: Incorrect surname format';
     };
 
     if(dni.classList.contains('validation')){
-        dniChecked.innerHTML = '<span>DNI: </span>' + dniValue;
+        dniChecked.innerText = 'DNI: ' + dniValue;
     }else if(dni.classList.contains('negation')){
-        dniChecked.innerHTML = '<span>DNI: Incorrect DNI format</span>';
+        dniChecked.innerText = 'DNI: Incorrect DNI format';
     };
 
     if(dob.classList.contains('validation')){
-        dobChecked.innerHTML = '<span>Date of birth: </span>' + dobValue;
+        dobChecked.innerText = 'Date of birth: ' + dobValue;
     }else if(dob.classList.contains('negation')){
-        dobChecked.innerHTML = '<span>Date of birth: Incorrect date format</span>';
+        dobChecked.innerText = 'Date of birth: Incorrect date format';
     };
 
     if(phone.classList.contains('validation')){
-        phoneChecked.innerHTML = '<span>Phone: </span>' + phoneValue;
+        phoneChecked.innerText = 'Phone: ' + phoneValue;
     }else if(phone.classList.contains('negation')){
-        phoneChecked.innerHTML = '<span>Phone: Incorrect phone format</span>';
+        phoneChecked.innerText = 'Phone: Incorrect phone format';
     };
 
     if(adress.classList.contains('validation')){
-        adressChecked.innerHTML = '<span>Adress: </span>' + adressValue;
+        adressChecked.innerText = 'Adress: ' + adressValue;
     }else if(adress.classList.contains('negation')){
-        adressChecked.innerHTML = '<span>Adress: Incorrect adress format</span>';
+        adressChecked.innerText = 'Adress: Incorrect adress format';
     };
 
     if(city.classList.contains('validation')){
-        cityChecked.innerHTML = '<span>City: </span>' + cityValue;
+        cityChecked.innerText = 'City: ' + cityValue;
     }else if(city.classList.contains('negation')){
-        cityChecked.innerHTML = '<span>City: Incorrect city format</span>';
+        cityChecked.innerText = 'City: Incorrect city format';
     };
 
     if(zipCode.classList.contains('validation')){
-        zipCodeChecked.innerHTML = '<span>Zip code: </span>' + zipCodeValue;
+        zipCodeChecked.innerText = 'Zip code: ' + zipCodeValue;
     }else if(zipCode.classList.contains('negation')){
-        zipCodeChecked.innerHTML = '<span>Zip code: Incorrect zip code format</span>';
+        zipCodeChecked.innerText = 'Zip code: Incorrect zip code format';
     };
 
     if(mail.classList.contains('validation')){
-        mailChecked.innerHTML = '<span>Mail: </span>' + mailValue;
+        mailChecked.innerText = 'Mail: ' + mailValue;
     }else if(mail.classList.contains('negation')){
-        mailChecked.innerHTML = '<span>Mail: Incorrect mail format</span>';
+        mailChecked.innerText = 'Mail: Incorrect mail format';
     };
 
     if(password.classList.contains('validation')){
-        passChecked.innerHTML = '<span>Password: </span>' + passValue;
+        passChecked.innerText = 'Password: ' + passValue;
     }else if(password.classList.contains('negation')){
-        passChecked.innerHTML = '<span>Password: Incorrect password format</span>';
+        passChecked.innerText = 'Password: Incorrect password format';
     };
 
     if(rePassword.classList.contains('validation')){
-        rePassChecked.innerHTML = '<span>Repeat password: </span>' + rePassValue;
+        rePassChecked.innerText = 'Repeat password: ' + rePassValue;
     }else if(rePassword.classList.contains('negation')){
-        rePassChecked.innerHTML = '<span>Repeat password: Incorrect password format</span>';
+        rePassChecked.innerText = 'Repeat password: Incorrect password format';
     };
 });
 

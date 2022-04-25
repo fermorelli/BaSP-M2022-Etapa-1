@@ -16,14 +16,14 @@ mail.addEventListener('blur', function(){
         mail.classList.remove('validation');
         mail.classList.add('negation');
         alertMail.style.color = 'red';
-        alertMail.innerHTML = '<span>You must enter a valid email format</span>'
+        alertMail.innerText = 'You must enter a valid email format';
     }
 });
 
 mail.addEventListener('focus', function(){
-    alertMail.classList.remove('negation');
-    alertMail.classList.remove('validation');
-    alertMail.style.color = "white";
+    mail.classList.remove('negation');
+    mail.classList.remove('validation');
+    alertMail.innerText = '';
 });
 
 password.addEventListener('blur', function(){
@@ -35,13 +35,14 @@ password.addEventListener('blur', function(){
         var justNumbers = true;
         var justLetters = true;
 
-        passValue.split('').forEach(letter=>{
+        passValue.split('').forEach(function(letter){
             if (allowed.indexOf(letter) == -1) isAlphanumeric = false;
             if (numbers.indexOf(letter) == -1) justNumbers = false;
             if (letters.indexOf(letter) == -1) justLetters = false;
         });
         if (isAlphanumeric && !justNumbers && !justLetters){
             password.classList.add('validation');
+            alertPass.style.display = 'none';
         }else{
             password.classList.add('negation');
             alertPass.style.color = 'red';
@@ -50,9 +51,9 @@ password.addEventListener('blur', function(){
 });
 
 password.addEventListener('focus', function(){
-    alertPass.classList.remove('negation');
-    alertPass.classList.remove('validation');
-    alertPass.style.color = "white";
+    password.classList.remove('negation');
+    password.classList.remove('validation');
+    alertPass.innerText = '';
 });
 
 button.addEventListener('click', function(){
