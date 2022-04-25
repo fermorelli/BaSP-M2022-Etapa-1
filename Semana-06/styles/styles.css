@@ -233,19 +233,16 @@ body {
 
     /*sign up form*/
     .sign-up{
-        height: 75%;
         font-size: 14px;
     }
 
     .signup-form{
-        flex-direction: row;
         flex-wrap: wrap;
         height: 300px;
     }
 
     .form1, .form2{
         width: 45%;
-        height: 300px;
     }
 
     #su-button{

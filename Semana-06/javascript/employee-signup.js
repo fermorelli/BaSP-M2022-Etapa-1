@@ -138,7 +138,8 @@ dob.addEventListener('blur', function(){
     var month = dobValue.substring(3,5);
     var year = dobValue.substring(6,10);
 
-    if(dobValue.length !== 10 || dobValue.substring(2,3) !== '/' || dobValue.substring(5,6) !== '/' || day <= 00 || day > 31 || month <= 00 || month > 12 || year < 1910 || year > 2004){
+    if(dobValue.length !== 10 || dobValue.substring(2,3) !== '/' || dobValue.substring(5,6) !== '/' || day <= 00
+    || day > 31 || month <= 00 || month > 12 || year < 1910 || year > 2004){
         dob.classList.add('negation');
         alertDob.style.color = 'red';
         alertDob.innerText = 'You must enter a valid date format';
