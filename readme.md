@@ -20,3 +20,7 @@
 ## Week 05:
 
     In this week assignment I've to make six differents types of JavaScript exercises, and include them in a new folder with a new index file. Then I've to link the different .js files that I created to that index file to be able to correctly visualize the exercises that I did. I have to demonstrate that the content shown in class and in the asynchronous material was understood and that it can be used correctly. Here's the link to visualize this week project: https://ilcosme.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
+
+## Week 06:
+
+    In this week assignment I've created the 'log in' and 'sign up' pages that we have made in Figma on the first week. I've made the necessary forms and also created the differens .js files to add the logic behind the forms. On top of that, I made some changes in the HTML file to make posible to navigate between the 3 pages(landing,log in, sign up). Here's the link to visualize this week project: https://ilcosme.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index.html

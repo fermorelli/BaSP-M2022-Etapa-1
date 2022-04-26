@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../styles/reset.css">
-        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/landing.css">
         <link rel="stylesheet" href="../styles/sidebar.css">
         <link rel="stylesheet" href="../styles/header.css">
         <link rel="stylesheet" href="../styles/footer.css">
@@ -226,29 +226,29 @@
                         <label for="name">
                             Name
                         </label>
-                        <input type="text" placeholder="Insert your name">
+                        <input id="name" type="text" placeholder="Insert your name">
+                        <div class="name-alert"></div>
                         <label for="email">
                             Email
                         </label>
-                        <input type="email" placeholder="Insert your email">
+                        <input id="mail" type="text" placeholder="Insert your email">
+                        <div class="mail-alert"></div>
                         <label for="contactarea">
                             Category:
                         </label>
                         <select name="area" id="area">
-                            <option value="qa">
-                                Quality Assurance
+                            <option value="Marketing">
+                                Marketing
                             </option>
-                            <option value="developer">
-                                Developer
+                            <option value="Sistems">
+                                Sistems
                             </option>
-                            <option value="pm">
-                                Project Manager
-                            </option>
-                            <option value="hr">
+                            <option value="Human Resources">
                                 Human Resources
                             </option>
                         </select>
-                        <textarea cols="30" rows="10" placeholder="Write us a message..."></textarea>
+                        <textarea id="text-area" cols="30" rows="10" placeholder="Write us a message..."></textarea>
+                        <div class="text-area-alert"></div>
                     </form>
                     <div class="form-buttons">
                         <button id="button-3">
@@ -259,6 +259,17 @@
                         </button>
                     </div>
                 </section>
+                <div class="overlay-1" id="overlay-1">
+                    <div class="popup">
+                      <div class="closeIcon"></div>
+                      <span id="name-checked"></span>
+                      <span id="mail-checked"></span>
+                      <span id="message-checked"></span>
+                      <button id="button-6">
+                          Back
+                        </button>
+                    </div>
+                </div>
             </div>
             <section class="ordered-lists">
                 <h3>
@@ -340,5 +351,6 @@
                 <img src="../assets/icons/facebook-brands.svg" alt="facebook logo" height="25px" width="25px">
             </a>
         </footer>
+        <script src="../javascript/contact.js"></script>
     </body>
 </html>

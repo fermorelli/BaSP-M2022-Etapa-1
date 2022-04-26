@@ -19,6 +19,14 @@ main {
     font-size: 12px;
 }
 
+.validation{
+    border: 1px solid green;
+}
+
+.negation{
+    border: 1px solid red;
+}
+
 /* home section */
 
 .article-1, .article-2, header {
@@ -122,7 +130,6 @@ main {
     padding: 6px;
     margin-top: 3px;
     margin-bottom: 8px;
-    border: 1px solid rgb(55,56,103);
     border-radius: 2px;
     resize: none;
 }
@@ -167,3 +174,35 @@ main {
 .ordered-lists h3 {
     display: none;
 }
+
+.overlay-1 {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
+
+  .popup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 25%;
+    top: 25%;
+    left: 25%;
+    box-sizing: border-box;
+    padding-top: 50px;
+    text-align: center;
+    background: white;
+  }
+ 
+  .popup span {
+    height: 50px;
+    font-size: 15px;
+    color: black;
+  }

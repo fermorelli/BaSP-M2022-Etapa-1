@@ -58,8 +58,13 @@ nameForm.addEventListener('blur', function(){
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
     });
+    
     if (!justNumbers && justLetters && nameValue.length > 3){
         nameForm.classList.add('validation');
+    }else if(nameValue.length == 0){
+        nameForm.classList.add('negation');
+        alertName.style.color = 'red';
+        alertName.innerText = 'Field is required';
     }else{
         nameForm.classList.add('negation');
         alertName.style.color = 'red';
@@ -88,6 +93,10 @@ surname.addEventListener('blur', function(){
     });
     if (!justNumbers && justLetters && surnameValue.length > 3){
         surname.classList.add('validation');
+    }else if(surnameValue.length == 0){
+        surname.classList.add('negation');
+        alertSurname.style.color = 'red';
+        alertSurname.innerText = 'Field is required';
     }else{
         surname.classList.add('negation');
         alertSurname.style.color = 'red';
@@ -116,6 +125,10 @@ dni.addEventListener('blur', function(){
     });
     if (justNumbers && !justLetters && dniValue.length > 7){
         dni.classList.add('validation');
+    }else if(dniValue.length == 0){
+        dni.classList.add('negation');
+        alertDni.style.color = 'red';
+        alertDni.innerText = 'Field is required';
     }else{
         dni.classList.add('negation');
         alertDni.style.color = 'red';
@@ -169,6 +182,10 @@ phone.addEventListener('blur', function(){
     });
     if (justNumbers && !justLetters && phoneValue.length == 10){
         phone.classList.add('validation');
+    }else if(phoneValue.length <= 0){
+        phone.classList.add('negation');
+        alertPhone.style.color = 'red';
+        alertPhone.innerText = 'Field is required';
     }else{
         phone.classList.add('negation');
         alertPhone.style.color = 'red';
@@ -200,6 +217,10 @@ adress.addEventListener('blur', function(){
     });
     if (isAlphanumeric && !justNumbers && !justLetters && adressValue.length >= 5 && adressValue.indexOf(' ') != -1){
         adress.classList.add('validation');
+    }else if(adressValue.length == 0){
+        adress.classList.add('negation');
+        alertAdress.style.color = 'red';
+        alertAdress.innerText = 'Field is required';
     }else{
         adress.classList.add('negation');
         alertAdress.style.color = 'red';
@@ -231,6 +252,10 @@ city.addEventListener('blur', function(){
     });
     if (isAlphanumeric && (!justNumbers || justLetters) && cityValue.length > 3){
         city.classList.add('validation');
+    }else if(cityValue.length == 0){
+        city.classList.add('negation');
+        alertCity.style.color = 'red';
+        alertCity.innerText = 'Field is required';
     }else{
         city.classList.add('negation');
         alertCity.style.color = 'red';
@@ -260,6 +285,10 @@ zipCode.addEventListener('blur', function(){
     });
     if (justNumbers && !justLetters && zipCodeValue.length>=4 && zipCodeValue.length<=5){
         zipCode.classList.add('validation');
+    }else if(zipCodeValue.length <= 0){
+        zipCode.classList.add('negation');
+        alertZipCode.style.color = 'red';
+        alertZipCode.innerText = 'Field is required';
     }else{
         zipCode.classList.add('negation');
         alertZipCode.style.color = 'red';
@@ -280,7 +309,11 @@ mail.addEventListener('blur', function(){
     var mailRegEx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
     if(mailInput.match(mailRegEx)){
         mail.classList.add('validation');
-    } else{
+    }else if(mailInput.length == 0){
+        mail.classList.add('negation');
+        alertMail.style.color = 'red';
+        alertMail.innerText = 'Field is required';
+    }else{
         mail.classList.remove('validation');
         mail.classList.add('negation');
         alertMail.style.color = 'red';
@@ -312,6 +345,10 @@ password.addEventListener('blur', function(){
     });
     if (isAlphanumeric && !justNumbers && !justLetters && passValue.length >= 8){
         password.classList.add('validation');
+    }else if(passValue.length <= 0){
+        password.classList.add('negation');
+        alertPass.style.color = 'red';
+        alertPass.innerText = 'Field is required';
     }else{
         password.classList.add('negation');
         alertPass.style.color = 'red';
@@ -343,6 +380,10 @@ rePassword.addEventListener('blur', function(){
     });
     if (isAlphanumeric && !justNumbers && !justLetters && rePassValue.length >= 8){
         rePassword.classList.add('validation');
+    }else if(rePassValue.length == 0){
+        rePassword.classList.add('negation');
+        alertRePass.style.color = 'red';
+        alertRePass.innerText = 'Field is required';
     }else{
         rePassword.classList.add('negation');
         alertRePass.style.color = 'red';
@@ -372,6 +413,12 @@ button.addEventListener('click', function(){
     var rePassValue = rePassword.value;
 
     document.getElementById('overlay').style.display = 'block';
+
+    if(nameValue.length == 0 && surnameValue.length == 0 && dniValue.length == 0 && dobValue.length == 0
+        && phoneValue.length == 0 && adressValue.length == 0 && cityValue.length == 0 && zipCodeValue.length == 0
+        && mailValue.length == 0 && passValue.length == 0 && rePassValue.length == 0){
+            nameChecked.innerText = 'Fields are empty';
+    };
 
     if(nameForm.classList.contains('validation')){
         nameChecked.innerText = 'Name: ' + nameValue;

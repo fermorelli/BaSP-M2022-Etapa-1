@@ -9,10 +9,14 @@ var passChecked = document.getElementById('pass-checked');
 
 mail.addEventListener('blur', function(){
     var mailInput = mail.value;
-    var mailRegEx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+    var mailRegEx = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     if(mailInput.match(mailRegEx)){
         mail.classList.add('validation');
-    } else{
+    }else if(mailInput.length == 0){
+        mail.classList.add('negation');
+        alertMail.style.color = 'red';
+        alertMail.innerText = 'Field is required';
+    }else{
         mail.classList.remove('validation');
         mail.classList.add('negation');
         alertMail.style.color = 'red';
@@ -40,13 +44,18 @@ password.addEventListener('blur', function(){
             if (numbers.indexOf(letter) == -1) justNumbers = false;
             if (letters.indexOf(letter) == -1) justLetters = false;
         });
+        
         if (isAlphanumeric && !justNumbers && !justLetters){
             password.classList.add('validation');
             alertPass.style.display = 'none';
+        }else if(passValue.length == 0){
+            password.classList.add('negation');
+            alertPass.style.color = 'red';
+            alertPass.innerText = 'Field is required';
         }else{
             password.classList.add('negation');
             alertPass.style.color = 'red';
-            alertPass.innerHTML = '<span>You must enter a valid password format</span>';
+            alertPass.innerText = 'You must enter a valid password format';
         }
 });
 
@@ -59,17 +68,22 @@ password.addEventListener('focus', function(){
 button.addEventListener('click', function(){
     var mailValue = mail.value;
     var passValue = password.value;
+
     document.getElementById('overlay').style.display = 'block';
-    if(mail.classList.contains('validation')){
-        mailChecked.innerHTML = '<span>Mail: </span>' + mailValue;
+
+    if(mailValue.length == 0 && passValue.length == 0){
+        mailChecked.innerText = 'Fields are empty';
+
+    }else if(mail.classList.contains('validation')){
+        mailChecked.innerText = 'Mail: ' + mailValue;
     }else if(mail.classList.contains('negation')){
-        mailChecked.innerHTML = '<span>Mail: Incorrect mail format</span>';
+        mailChecked.innerText = 'Mail: Incorrect mail format';
     };
 
     if(password.classList.contains('validation')){
-        passChecked.innerHTML = '<span>Password: </span>' + passValue;
-    }else if(password.classList.contains('negation')){
-        passChecked.innerHTML = '<span>Password: Incorrect password format</span>';
+        passChecked.innerText = 'Password: ' + passValue;
+    }else if(password.classList.contains('negation') && passValue.length > 0){
+        passChecked.innerText = 'Password: Incorrect password format';
     };
 });
 
