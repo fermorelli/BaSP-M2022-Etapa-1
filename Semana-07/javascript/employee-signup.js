@@ -411,6 +411,7 @@ button.addEventListener('click', function(){
     var mailValue = mail.value;
     var passValue = password.value;
     var rePassValue = rePassword.value;
+    var isOk = 0; 
 
     document.getElementById('overlay').style.display = 'block';
 
@@ -422,71 +423,124 @@ button.addEventListener('click', function(){
 
     if(nameForm.classList.contains('validation')){
         nameChecked.innerText = 'Name: ' + nameValue;
+        isOk += 1;
     }else if(nameForm.classList.contains('negation')){
         nameChecked.innerText = 'Name: Incorrect name format';
     };
 
     if(surname.classList.contains('validation')){
         surnameChecked.innerText = 'Surname: ' + surnameValue;
+        isOk += 1;
     }else if(surname.classList.contains('negation')){
         surnameChecked.innerText = 'Surname: Incorrect surname format';
     };
 
     if(dni.classList.contains('validation')){
         dniChecked.innerText = 'DNI: ' + dniValue;
+        isOk += 1;
     }else if(dni.classList.contains('negation')){
         dniChecked.innerText = 'DNI: Incorrect DNI format';
     };
 
     if(dob.classList.contains('validation')){
         dobChecked.innerText = 'Date of birth: ' + dobValue;
+        isOk += 1;
     }else if(dob.classList.contains('negation')){
         dobChecked.innerText = 'Date of birth: Incorrect date format';
     };
 
     if(phone.classList.contains('validation')){
         phoneChecked.innerText = 'Phone: ' + phoneValue;
+        isOk += 1;
     }else if(phone.classList.contains('negation')){
         phoneChecked.innerText = 'Phone: Incorrect phone format';
     };
 
     if(adress.classList.contains('validation')){
         adressChecked.innerText = 'Adress: ' + adressValue;
+        isOk += 1;
     }else if(adress.classList.contains('negation')){
         adressChecked.innerText = 'Adress: Incorrect adress format';
     };
 
     if(city.classList.contains('validation')){
         cityChecked.innerText = 'City: ' + cityValue;
+        isOk += 1;
     }else if(city.classList.contains('negation')){
         cityChecked.innerText = 'City: Incorrect city format';
     };
 
     if(zipCode.classList.contains('validation')){
         zipCodeChecked.innerText = 'Zip code: ' + zipCodeValue;
+        isOk += 1;
     }else if(zipCode.classList.contains('negation')){
         zipCodeChecked.innerText = 'Zip code: Incorrect zip code format';
     };
 
     if(mail.classList.contains('validation')){
         mailChecked.innerText = 'Mail: ' + mailValue;
+        isOk += 1;
     }else if(mail.classList.contains('negation')){
         mailChecked.innerText = 'Mail: Incorrect mail format';
     };
 
     if(password.classList.contains('validation')){
         passChecked.innerText = 'Password: ' + passValue;
+        isOk += 1;
     }else if(password.classList.contains('negation')){
         passChecked.innerText = 'Password: Incorrect password format';
     };
 
     if(rePassword.classList.contains('validation')){
         rePassChecked.innerText = 'Repeat password: ' + rePassValue;
+        isOk += 1;
     }else if(rePassword.classList.contains('negation')){
         rePassChecked.innerText = 'Repeat password: Incorrect password format';
     };
+
+    if(isOk==11){
+        console.log('is ok');
+        //aca enviaria los datos request http usando fetch
+        //si la respuesta fue succesful mostrar un alert indicando que se envio ok
+        //mostrar en el mismo alert la info cargada en el formulario
+        //guardar los datos en localstorage
+    }else{
+        console.log('not ok');
+        //mostrar alert indicando que hubo un error
+        //indicar el error utilizando la info obtenida en la respuesta de la request
+        //no guardar nada nuevo
+    }
 });
 
 button2.addEventListener('click', function(){
     document.getElementById('overlay').style.display = 'none';
 });
+
+//NUEVO
+
+//alert('Usuario: ' + sessionStorage.getItem('usuario') + 'Correo ' + sessionStorage.getItem('correo'));
+
+//este para la problematica
+
+//alert('Usuario: ' + localStorage.getItem('usuario') + 'Correo ' + localStorage.getItem('correo'));
+
+/*fetch('url')
+    .then(function (response){
+        return response.json()
+    })
+    .then(function (jsonResponse){
+        console.log(data.name)
+        var objeto
+        datos del objeto
+        localstorage.
+    })
+    .catch (function (error){
+        logic
+    })*/
+
+
+var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
+
+url += '?name=' + nameForm.value + '&lastname=' + surname.value + '&dni=' + dni.value
+
+//despues llamada a fetch

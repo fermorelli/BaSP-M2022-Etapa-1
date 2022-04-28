@@ -68,6 +68,7 @@ password.addEventListener('focus', function(){
 button.addEventListener('click', function(){
     var mailValue = mail.value;
     var passValue = password.value;
+    var isOk = 0;
 
     document.getElementById('overlay').style.display = 'block';
 
@@ -76,15 +77,30 @@ button.addEventListener('click', function(){
 
     }else if(mail.classList.contains('validation')){
         mailChecked.innerText = 'Mail: ' + mailValue;
+        isOk += 1;
     }else if(mail.classList.contains('negation')){
         mailChecked.innerText = 'Mail: Incorrect mail format';
     };
 
     if(password.classList.contains('validation')){
         passChecked.innerText = 'Password: ' + passValue;
+        isOk += 1;
     }else if(password.classList.contains('negation') && passValue.length > 0){
         passChecked.innerText = 'Password: Incorrect password format';
     };
+
+    if(isOk==2){
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login'
+        url += '?email=' + mail.value + '&password=' + password.value;
+
+        fetch(url)
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(jsonResponse){
+                document.getElementById('login-checked').innerText = '¡Succesful request! - ' + jsonResponse.msg;
+            });
+    }
 });
 
 button2.addEventListener('click', function(){
