@@ -499,48 +499,22 @@ button.addEventListener('click', function(){
     };
 
     if(isOk==11){
-        console.log('is ok');
-        //aca enviaria los datos request http usando fetch
-        //si la respuesta fue succesful mostrar un alert indicando que se envio ok
-        //mostrar en el mismo alert la info cargada en el formulario
-        //guardar los datos en localstorage
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
+
+        url += '?name=' + nameForm.value + '&lastName=' + surname.value + '&dni=' + dni.value + '&dob=' + dob.value + '&phone=' + phone.value + '&adress=' + adress.value + '&city=' + city.value + '&zip=' + zipCode.value + '&email=' + mail.value + '&password' + password.value;
+
+        fetch(url)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(jsonResponse){
+                console.log(jsonResponse);
+            })
     }else{
         console.log('not ok');
-        //mostrar alert indicando que hubo un error
-        //indicar el error utilizando la info obtenida en la respuesta de la request
-        //no guardar nada nuevo
     }
 });
 
 button2.addEventListener('click', function(){
     document.getElementById('overlay').style.display = 'none';
 });
-
-//NUEVO
-
-//alert('Usuario: ' + sessionStorage.getItem('usuario') + 'Correo ' + sessionStorage.getItem('correo'));
-
-//este para la problematica
-
-//alert('Usuario: ' + localStorage.getItem('usuario') + 'Correo ' + localStorage.getItem('correo'));
-
-/*fetch('url')
-    .then(function (response){
-        return response.json()
-    })
-    .then(function (jsonResponse){
-        console.log(data.name)
-        var objeto
-        datos del objeto
-        localstorage.
-    })
-    .catch (function (error){
-        logic
-    })*/
-
-
-var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
-
-url += '?name=' + nameForm.value + '&lastname=' + surname.value + '&dni=' + dni.value
-
-//despues llamada a fetch

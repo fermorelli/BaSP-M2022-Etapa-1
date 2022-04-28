@@ -98,8 +98,8 @@ button.addEventListener('click', function(){
                 return response.json()
             })
             .then(function(jsonResponse){
-                document.getElementById('login-checked').innerText = '¡Succesful request! - ' + jsonResponse.msg;
-            });
+                document.getElementById('login-checked').innerText = jsonResponse.msg;
+            })       
     }
 });
 
