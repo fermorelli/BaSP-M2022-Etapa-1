@@ -501,14 +501,14 @@ button.addEventListener('click', function(){
     if(isOk==11){
         var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
 
-        url += '?name=' + nameForm.value + '&lastName=' + surname.value + '&dni=' + dni.value + '&dob=' + dob.value + '&phone=' + phone.value + '&adress=' + adress.value + '&city=' + city.value + '&zip=' + zipCode.value + '&email=' + mail.value + '&password' + password.value;
+        url += '?name=' + nameForm.value + '&lastName=' + surname.value + '&dni=' + dni.value + '&dob=' + dob.value + '&phone=' + phone.value + '&address=' + adress.value + '&city=' + city.value + '&zip=' + zipCode.value + '&email=' + mail.value + '&password=' + password.value;
 
         fetch(url)
             .then(function(response){
                 return response.json();
             })
             .then(function(jsonResponse){
-                console.log(jsonResponse);
+                document.getElementById('signup-checked').innerText = jsonResponse.msg;
             })
     }else{
         console.log('not ok');
