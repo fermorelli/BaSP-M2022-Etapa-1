@@ -45,11 +45,12 @@ var rePassChecked = document.getElementById('re-pass-checked')
 var button = document.getElementById('su-button');
 var button2 = document.getElementById('button-7');
 
+var numbers = '0123456789';
+var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+
 //NAME VALIDATION
 
 nameForm.addEventListener('blur', function(){
-    var numbers = '0123456789';
-    var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var nameValue = nameForm.value;
     var justNumbers = true;
     var justLetters = true;
@@ -63,11 +64,9 @@ nameForm.addEventListener('blur', function(){
         nameForm.classList.add('validation');
     }else if(nameValue.length == 0){
         nameForm.classList.add('negation');
-        alertName.style.color = 'red';
         alertName.innerText = 'Field is required';
     }else{
         nameForm.classList.add('negation');
-        alertName.style.color = 'red';
         alertName.innerText = 'You must enter a valid name format';
     }
 });
@@ -81,8 +80,6 @@ nameForm.addEventListener('focus', function(){
 //SURNAME VALIDATION
 
 surname.addEventListener('blur', function(){
-    var numbers = '0123456789';
-    var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var surnameValue = surname.value;
     var justNumbers = true;
     var justLetters = true;
@@ -95,11 +92,9 @@ surname.addEventListener('blur', function(){
         surname.classList.add('validation');
     }else if(surnameValue.length == 0){
         surname.classList.add('negation');
-        alertSurname.style.color = 'red';
         alertSurname.innerText = 'Field is required';
     }else{
         surname.classList.add('negation');
-        alertSurname.style.color = 'red';
         alertSurname.innerText = 'You must enter a valid surname format';
     }
 });
@@ -113,8 +108,6 @@ surname.addEventListener('focus', function(){
 //DNI VALIDATION
 
 dni.addEventListener('blur', function(){
-    var numbers = '0123456789';
-    var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var dniValue = dni.value;
     var justNumbers = true;
     var justLetters = true;
@@ -127,11 +120,9 @@ dni.addEventListener('blur', function(){
         dni.classList.add('validation');
     }else if(dniValue.length == 0){
         dni.classList.add('negation');
-        alertDni.style.color = 'red';
         alertDni.innerText = 'Field is required';
     }else{
         dni.classList.add('negation');
-        alertDni.style.color = 'red';
         alertDni.innerText = 'You must enter a valid dni format';
     }
 });
@@ -154,7 +145,6 @@ dob.addEventListener('blur', function(){
     if(dobValue.length !== 10 || dobValue.substring(2,3) !== '/' || dobValue.substring(5,6) !== '/' || day <= 00
     || day > 31 || month <= 00 || month > 12 || year < 1910 || year > 2004){
         dob.classList.add('negation');
-        alertDob.style.color = 'red';
         alertDob.innerText = 'You must enter a valid date format';
     }else{
         dob.classList.add('validation');
@@ -170,8 +160,6 @@ dob.addEventListener('focus', function(){
 //PHONE VALIDATION
 
 phone.addEventListener('blur', function(){
-    var numbers = '0123456789';
-    var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var phoneValue = phone.value;
     var justNumbers = true;
     var justLetters = true;
@@ -184,11 +172,9 @@ phone.addEventListener('blur', function(){
         phone.classList.add('validation');
     }else if(phoneValue.length <= 0){
         phone.classList.add('negation');
-        alertPhone.style.color = 'red';
         alertPhone.innerText = 'Field is required';
     }else{
         phone.classList.add('negation');
-        alertPhone.style.color = 'red';
         alertPhone.innerText = 'You must enter a valid phone number';
     }
 });
@@ -203,8 +189,7 @@ phone.addEventListener('focus', function(){
 
 adress.addEventListener('blur', function(){
     var allowed = ' 0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-    var numbers = '0123456789';
-    var letters = ' abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+    var letterS = ' abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var adressValue = adress.value;
     var isAlphanumeric = true;
     var justNumbers = true;
@@ -213,17 +198,15 @@ adress.addEventListener('blur', function(){
     adressValue.split('').forEach(function(letter){
         if (allowed.indexOf(letter) == -1) isAlphanumeric = false;
         if (numbers.indexOf(letter) == -1) justNumbers = false;
-        if (letters.indexOf(letter) == -1) justLetters = false;
+        if (letterS.indexOf(letter) == -1) justLetters = false;
     });
     if (isAlphanumeric && !justNumbers && !justLetters && adressValue.length >= 5 && adressValue.indexOf(' ') != -1){
         adress.classList.add('validation');
     }else if(adressValue.length == 0){
         adress.classList.add('negation');
-        alertAdress.style.color = 'red';
         alertAdress.innerText = 'Field is required';
     }else{
         adress.classList.add('negation');
-        alertAdress.style.color = 'red';
         alertAdress.innerText = 'You must enter a valid adress';
     }
 });
@@ -238,8 +221,6 @@ adress.addEventListener('focus', function(){
 
 city.addEventListener('blur', function(){
     var allowed = '0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-    var numbers = '0123456789';
-    var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var cityValue = city.value;
     var isAlphanumeric = true;
     var justNumbers = true;
@@ -254,11 +235,9 @@ city.addEventListener('blur', function(){
         city.classList.add('validation');
     }else if(cityValue.length == 0){
         city.classList.add('negation');
-        alertCity.style.color = 'red';
         alertCity.innerText = 'Field is required';
     }else{
         city.classList.add('negation');
-        alertCity.style.color = 'red';
         alertCity.innerText = 'You must enter a valid city format';
     }
 });
@@ -273,8 +252,6 @@ city.addEventListener('focus', function(){
 
 
 zipCode.addEventListener('blur', function(){
-    var numbers = '0123456789';
-    var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var zipCodeValue = zipCode.value;
     var justNumbers = true;
     var justLetters = true;
@@ -287,11 +264,9 @@ zipCode.addEventListener('blur', function(){
         zipCode.classList.add('validation');
     }else if(zipCodeValue.length <= 0){
         zipCode.classList.add('negation');
-        alertZipCode.style.color = 'red';
         alertZipCode.innerText = 'Field is required';
     }else{
         zipCode.classList.add('negation');
-        alertZipCode.style.color = 'red';
         alertZipCode.innerText = 'You must enter a valid zip code number';
     }
 });
@@ -311,12 +286,10 @@ mail.addEventListener('blur', function(){
         mail.classList.add('validation');
     }else if(mailInput.length == 0){
         mail.classList.add('negation');
-        alertMail.style.color = 'red';
         alertMail.innerText = 'Field is required';
     }else{
         mail.classList.remove('validation');
         mail.classList.add('negation');
-        alertMail.style.color = 'red';
         alertMail.innerText = 'You must enter a valid email format'
     }
 });
@@ -331,8 +304,6 @@ mail.addEventListener('focus', function(){
 
 password.addEventListener('blur', function(){
     var allowed = '0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-    var numbers = '0123456789';
-    var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var passValue = password.value;
     var isAlphanumeric = true;
     var justNumbers = true;
@@ -351,7 +322,6 @@ password.addEventListener('blur', function(){
         alertPass.innerText = 'Field is required';
     }else{
         password.classList.add('negation');
-        alertPass.style.color = 'red';
         alertPass.innerText = 'You must enter a valid password format';
     }
 });
@@ -366,8 +336,6 @@ password.addEventListener('focus', function(){
 
 rePassword.addEventListener('blur', function(){
     var allowed = '0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-    var numbers = '0123456789';
-    var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var rePassValue = rePassword.value;
     var isAlphanumeric = true;
     var justNumbers = true;
@@ -386,7 +354,6 @@ rePassword.addEventListener('blur', function(){
         alertRePass.innerText = 'Field is required';
     }else{
         rePassword.classList.add('negation');
-        alertRePass.style.color = 'red';
         alertRePass.innerText = 'You must enter a valid password format';
     }
 });
@@ -422,77 +389,66 @@ button.addEventListener('click', function(){
     };
 
     if(nameForm.classList.contains('validation')){
-        //nameChecked.innerText = 'Name: ' + nameValue;
         isOk += 1;
     }else if(nameForm.classList.contains('negation')){
         nameChecked.innerText = 'Name: Incorrect name format';
     };
 
     if(surname.classList.contains('validation')){
-        //surnameChecked.innerText = 'Surname: ' + surnameValue;
         isOk += 1;
     }else if(surname.classList.contains('negation')){
         surnameChecked.innerText = 'Surname: Incorrect surname format';
     };
 
     if(dni.classList.contains('validation')){
-        //dniChecked.innerText = 'DNI: ' + dniValue;
         isOk += 1;
     }else if(dni.classList.contains('negation')){
         dniChecked.innerText = 'DNI: Incorrect DNI format';
     };
 
     if(dob.classList.contains('validation')){
-        //dobChecked.innerText = 'Date of birth: ' + dobValue;
         isOk += 1;
     }else if(dob.classList.contains('negation')){
         dobChecked.innerText = 'Date of birth: Incorrect date format';
     };
 
     if(phone.classList.contains('validation')){
-        //phoneChecked.innerText = 'Phone: ' + phoneValue;
         isOk += 1;
     }else if(phone.classList.contains('negation')){
         phoneChecked.innerText = 'Phone: Incorrect phone format';
     };
 
     if(adress.classList.contains('validation')){
-        //adressChecked.innerText = 'Adress: ' + adressValue;
         isOk += 1;
     }else if(adress.classList.contains('negation')){
         adressChecked.innerText = 'Adress: Incorrect adress format';
     };
 
     if(city.classList.contains('validation')){
-        //cityChecked.innerText = 'City: ' + cityValue;
         isOk += 1;
     }else if(city.classList.contains('negation')){
         cityChecked.innerText = 'City: Incorrect city format';
     };
 
     if(zipCode.classList.contains('validation')){
-        //zipCodeChecked.innerText = 'Zip code: ' + zipCodeValue;
         isOk += 1;
     }else if(zipCode.classList.contains('negation')){
         zipCodeChecked.innerText = 'Zip code: Incorrect zip code format';
     };
 
     if(mail.classList.contains('validation')){
-        //mailChecked.innerText = 'Mail: ' + mailValue;
         isOk += 1;
     }else if(mail.classList.contains('negation')){
         mailChecked.innerText = 'Mail: Incorrect mail format';
     };
 
     if(password.classList.contains('validation')){
-        //passChecked.innerText = 'Password: ' + passValue;
         isOk += 1;
     }else if(password.classList.contains('negation')){
         passChecked.innerText = 'Password: Incorrect password format';
     };
 
     if(rePassword.classList.contains('validation')){
-        //rePassChecked.innerText = 'Repeat password: ' + rePassValue;
         isOk += 1;
     }else if(rePassword.classList.contains('negation')){
         rePassChecked.innerText = 'Repeat password: Incorrect password format';
@@ -508,19 +464,58 @@ button.addEventListener('click', function(){
                 return response.json();
             })
             .then(function(jsonResponse){
-                if(jsonResponse.succes=true){
+                console.log(jsonResponse);
                 document.getElementById('signup-checked').innerText = jsonResponse.msg;
-                //aca va el codigo para local storage
-                }else{
-                    throw jsonResponse;
+                var newUser = {
+                    Name: jsonResponse.data.name,
+                    LastName: jsonResponse.data.lastName,
+                    Dni: jsonResponse.data.dni,
+                    Dob: jsonResponse.data.dob,
+                    Phone: jsonResponse.data.phone,
+                    Address: jsonResponse.data.address,
+                    City: jsonResponse.data.city,
+                    ZipCode: jsonResponse.data.zip,
+                    Mail: jsonResponse.data.email,
+                    Password: jsonResponse.data.password,
                 }
+                var newUserJson = JSON.stringify(newUser);
+                localStorage.setItem('user:', newUserJson);
+
+                nameChecked.innerText = 'Name: ' + newUser.Name;
+                surnameChecked.innerText = 'Last name: ' + newUser.LastName;
+                dniChecked.innerText = 'DNI: ' + newUser.Dni;
+                dobChecked.innerText = 'Date of birth: ' + newUser.Dob;
+                phoneChecked.innerText = 'Phone: ' + newUser.Phone;
+                adressChecked.innerText = 'Address: ' + newUser.Address;
+                cityChecked.innerText = 'City: ' + newUser.City;
+                zipCodeChecked.innerText = 'Zip: ' + newUser.ZipCode;
+                mailChecked.innerText = 'Mail: ' + newUser.Mail;
+                passChecked.innerText = 'Password: ' + newUser.Password;
             })
-            .catch(function(error){
-                document.getElementById('signup-checked').innerText = jsonResponse.msg;
-            })
+    }else{
+        console.log('not ok');
     }
 });
 
 button2.addEventListener('click', function(){
     document.getElementById('overlay').style.display = 'none';
 });
+
+window.onload = function(){
+    console.log('aparezco')
+    if(localStorage.length > 0){
+        var newUserOnLoad = JSON.parse(localStorage.getItem('user:'));
+        console.log(newUserOnLoad);
+        nameForm.value = newUserOnLoad.Name;
+        surname.value = newUserOnLoad.LastName;
+        dni.value = newUserOnLoad.Dni;
+        dob.value = newUserOnLoad.Dob;
+        phone.value = newUserOnLoad.Phone;
+        adress.value = newUserOnLoad.Address;
+        city.value = newUserOnLoad.City;
+        zipCode.value = newUserOnLoad.ZipCode;
+        mail.value = newUserOnLoad.Mail;
+        password.value = newUserOnLoad.Password;
+        rePassword.value = newUserOnLoad.Password;
+    }
+};

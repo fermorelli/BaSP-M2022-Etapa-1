@@ -78,8 +78,29 @@ body {
 
     /*contact us*/
 
-    .contact-us button{
+    .contact-us button {
         transform: scale(1.1);
+    }
+
+    .sign-up {
+        font-size: 14px;
+    }
+
+    .signup-form {
+        flex-wrap: wrap;
+        height: 200px;
+    }
+
+    .form1, .form2 {
+        width: 45%;
+    }
+
+    #su-button {
+        margin-top: 150px;
+    }
+
+    .login {
+        width: 40%;
     }
 
 }
@@ -231,22 +252,16 @@ body {
         font-size: 16px;
     }
 
-    /*sign up form*/
-    .sign-up{
-        font-size: 14px;
+    .login{
+        width: 40%;
     }
 
-    .signup-form{
-        flex-wrap: wrap;
-        height: 300px;
-    }
+    .popup {
+        width: 20%;
+        height: 10%;
+        top: 25%;
+        left: 40%;
+      }
 
-    .form1, .form2{
-        width: 45%;
-    }
-
-    #su-button{
-        margin-top: 150px;
-    }
 }
 
