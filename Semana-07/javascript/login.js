@@ -76,14 +76,12 @@ button.addEventListener('click', function(){
         mailChecked.innerText = 'Fields are empty';
 
     }else if(mail.classList.contains('validation')){
-        mailChecked.innerText = 'Mail: ' + mailValue;
         isOk += 1;
     }else if(mail.classList.contains('negation')){
         mailChecked.innerText = 'Mail: Incorrect mail format';
     };
 
     if(password.classList.contains('validation')){
-        passChecked.innerText = 'Password: ' + passValue;
         isOk += 1;
     }else if(password.classList.contains('negation') && passValue.length > 0){
         passChecked.innerText = 'Password: Incorrect password format';
@@ -98,6 +96,13 @@ button.addEventListener('click', function(){
                 return response.json()
             })
             .then(function(jsonResponse){
+                if(jsonResponse.succes=true){
+                    document.getElementById('login-checked').innerText = jsonResponse.msg;
+                }else{
+                    throw jsonResponse;
+                }
+            })
+            .catch(function(error){
                 document.getElementById('login-checked').innerText = jsonResponse.msg;
             })       
     }

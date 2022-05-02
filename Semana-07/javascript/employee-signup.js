@@ -147,8 +147,8 @@ dni.addEventListener('focus', function(){
 
 dob.addEventListener('blur', function(){
     var dobValue = dob.value;
-    var day = dobValue.substring(0,2);
-    var month = dobValue.substring(3,5);
+    var month = dobValue.substring(0,2);
+    var day = dobValue.substring(3,5);
     var year = dobValue.substring(6,10);
 
     if(dobValue.length !== 10 || dobValue.substring(2,3) !== '/' || dobValue.substring(5,6) !== '/' || day <= 00
@@ -422,77 +422,77 @@ button.addEventListener('click', function(){
     };
 
     if(nameForm.classList.contains('validation')){
-        nameChecked.innerText = 'Name: ' + nameValue;
+        //nameChecked.innerText = 'Name: ' + nameValue;
         isOk += 1;
     }else if(nameForm.classList.contains('negation')){
         nameChecked.innerText = 'Name: Incorrect name format';
     };
 
     if(surname.classList.contains('validation')){
-        surnameChecked.innerText = 'Surname: ' + surnameValue;
+        //surnameChecked.innerText = 'Surname: ' + surnameValue;
         isOk += 1;
     }else if(surname.classList.contains('negation')){
         surnameChecked.innerText = 'Surname: Incorrect surname format';
     };
 
     if(dni.classList.contains('validation')){
-        dniChecked.innerText = 'DNI: ' + dniValue;
+        //dniChecked.innerText = 'DNI: ' + dniValue;
         isOk += 1;
     }else if(dni.classList.contains('negation')){
         dniChecked.innerText = 'DNI: Incorrect DNI format';
     };
 
     if(dob.classList.contains('validation')){
-        dobChecked.innerText = 'Date of birth: ' + dobValue;
+        //dobChecked.innerText = 'Date of birth: ' + dobValue;
         isOk += 1;
     }else if(dob.classList.contains('negation')){
         dobChecked.innerText = 'Date of birth: Incorrect date format';
     };
 
     if(phone.classList.contains('validation')){
-        phoneChecked.innerText = 'Phone: ' + phoneValue;
+        //phoneChecked.innerText = 'Phone: ' + phoneValue;
         isOk += 1;
     }else if(phone.classList.contains('negation')){
         phoneChecked.innerText = 'Phone: Incorrect phone format';
     };
 
     if(adress.classList.contains('validation')){
-        adressChecked.innerText = 'Adress: ' + adressValue;
+        //adressChecked.innerText = 'Adress: ' + adressValue;
         isOk += 1;
     }else if(adress.classList.contains('negation')){
         adressChecked.innerText = 'Adress: Incorrect adress format';
     };
 
     if(city.classList.contains('validation')){
-        cityChecked.innerText = 'City: ' + cityValue;
+        //cityChecked.innerText = 'City: ' + cityValue;
         isOk += 1;
     }else if(city.classList.contains('negation')){
         cityChecked.innerText = 'City: Incorrect city format';
     };
 
     if(zipCode.classList.contains('validation')){
-        zipCodeChecked.innerText = 'Zip code: ' + zipCodeValue;
+        //zipCodeChecked.innerText = 'Zip code: ' + zipCodeValue;
         isOk += 1;
     }else if(zipCode.classList.contains('negation')){
         zipCodeChecked.innerText = 'Zip code: Incorrect zip code format';
     };
 
     if(mail.classList.contains('validation')){
-        mailChecked.innerText = 'Mail: ' + mailValue;
+        //mailChecked.innerText = 'Mail: ' + mailValue;
         isOk += 1;
     }else if(mail.classList.contains('negation')){
         mailChecked.innerText = 'Mail: Incorrect mail format';
     };
 
     if(password.classList.contains('validation')){
-        passChecked.innerText = 'Password: ' + passValue;
+        //passChecked.innerText = 'Password: ' + passValue;
         isOk += 1;
     }else if(password.classList.contains('negation')){
         passChecked.innerText = 'Password: Incorrect password format';
     };
 
     if(rePassword.classList.contains('validation')){
-        rePassChecked.innerText = 'Repeat password: ' + rePassValue;
+        //rePassChecked.innerText = 'Repeat password: ' + rePassValue;
         isOk += 1;
     }else if(rePassword.classList.contains('negation')){
         rePassChecked.innerText = 'Repeat password: Incorrect password format';
@@ -508,10 +508,16 @@ button.addEventListener('click', function(){
                 return response.json();
             })
             .then(function(jsonResponse){
+                if(jsonResponse.succes=true){
+                document.getElementById('signup-checked').innerText = jsonResponse.msg;
+                //aca va el codigo para local storage
+                }else{
+                    throw jsonResponse;
+                }
+            })
+            .catch(function(error){
                 document.getElementById('signup-checked').innerText = jsonResponse.msg;
             })
-    }else{
-        console.log('not ok');
     }
 });
 
