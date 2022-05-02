@@ -70,9 +70,9 @@
     left: 0;
     background: rgba(0, 0, 0, 0.8);
     z-index: 2;
-  }
+}
 
-  .popup {
+.popup {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -86,16 +86,17 @@
     padding-top: 50px;
     text-align: center;
     background: white;
-  }
+}
  
-  .popup span {
+.popup span {
     height: 50px;
     font-size: 15px;
     color: black;
-  }
-
+}
 .form1 div, .form2 div {
     color: red;
     height: 15px;
     font-size: 13px;
-}  
+}
+
+

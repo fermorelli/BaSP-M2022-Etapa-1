@@ -47,6 +47,7 @@ var button2 = document.getElementById('button-7');
 
 var numbers = '0123456789';
 var letters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+var allowed = '0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
 
 //NAME VALIDATION
 
@@ -146,6 +147,9 @@ dob.addEventListener('blur', function(){
     || day > 31 || month <= 00 || month > 12 || year < 1910 || year > 2004){
         dob.classList.add('negation');
         alertDob.innerText = 'You must enter a valid date format';
+    }else if(month==02 && day > 28){
+        dob.classList.add('negation');
+        alertDob.innerText = 'You must enter a valid date format';
     }else{
         dob.classList.add('validation');
     }
@@ -220,7 +224,6 @@ adress.addEventListener('focus', function(){
 //CITY VALIDATION
 
 city.addEventListener('blur', function(){
-    var allowed = '0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var cityValue = city.value;
     var isAlphanumeric = true;
     var justNumbers = true;
@@ -303,7 +306,6 @@ mail.addEventListener('focus', function(){
 //PASSWORD VALIDATION
 
 password.addEventListener('blur', function(){
-    var allowed = '0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var passValue = password.value;
     var isAlphanumeric = true;
     var justNumbers = true;
@@ -318,7 +320,6 @@ password.addEventListener('blur', function(){
         password.classList.add('validation');
     }else if(passValue.length <= 0){
         password.classList.add('negation');
-        alertPass.style.color = 'red';
         alertPass.innerText = 'Field is required';
     }else{
         password.classList.add('negation');
@@ -335,7 +336,7 @@ password.addEventListener('focus', function(){
 //REPEAT PASSWORD VALIDATION
 
 rePassword.addEventListener('blur', function(){
-    var allowed = '0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+    var passValue = password.value;
     var rePassValue = rePassword.value;
     var isAlphanumeric = true;
     var justNumbers = true;
@@ -346,12 +347,14 @@ rePassword.addEventListener('blur', function(){
         if (numbers.indexOf(letter) == -1) justNumbers = false;
         if (letters.indexOf(letter) == -1) justLetters = false;
     });
-    if (isAlphanumeric && !justNumbers && !justLetters && rePassValue.length >= 8){
+    if (isAlphanumeric && !justNumbers && !justLetters && rePassValue.length >= 8 && rePassValue === passValue){
         rePassword.classList.add('validation');
     }else if(rePassValue.length == 0){
         rePassword.classList.add('negation');
-        alertRePass.style.color = 'red';
         alertRePass.innerText = 'Field is required';
+    }else if(rePassValue != passValue){
+        rePassword.classList.add('negation');
+        alertRePass.innerText = 'Password do not match';
     }else{
         rePassword.classList.add('negation');
         alertRePass.innerText = 'You must enter a valid password format';
@@ -493,7 +496,7 @@ button.addEventListener('click', function(){
                 passChecked.innerText = 'Password: ' + newUser.Password;
             })
     }else{
-        console.log('not ok');
+        document.getElementById('signup-checked').innerText = 'Can not create new user';
     }
 });
 

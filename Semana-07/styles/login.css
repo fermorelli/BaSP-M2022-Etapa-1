@@ -58,41 +58,41 @@
     z-index: 2;
   }
 
-  .popup {
+.popup {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 60%;
     height: 10%;
     top: 10%;
-    left: 30%;
+    left: 20%;
     box-sizing: border-box;
     border-radius: 15px;
     padding-top: 50px;
     text-align: center;
     background: white;
-  }
+}
  
-  .popup span {
+.popup span {
     height: 50px;
     font-size: 15px;
     color: black;
-  }
+}
 
-  #button-6, #login-button{
+#button-6, #login-button{
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
-  }
+}
 
-  #login-checked{
+#login-checked{
       text-transform: uppercase;
       font-weight: bold;
       color: rgb(55,56,103);
-  }
+}
 
-  .login-form div{
-      font-size: 13px;
+.login-form div{
+      font-size: 12px;
       height: 15px;
-  }
+}
