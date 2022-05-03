@@ -108,4 +108,7 @@ button.addEventListener('click', function(){
 
 button2.addEventListener('click', function(){
     document.getElementById('overlay').style.display = 'none';
+    mailChecked.innerText = '';
+    passChecked.innerText = '';
+    document.getElementById('login-checked').innerText = '';
 });

@@ -502,6 +502,17 @@ button.addEventListener('click', function(){
 
 button2.addEventListener('click', function(){
     document.getElementById('overlay').style.display = 'none';
+    nameChecked.innerText = '';
+    surnameChecked.innerText = '';
+    dniChecked.innerText = '';
+    dobChecked.innerText = '';
+    phoneChecked.innerText = '';
+    adressChecked.innerText = '';
+    cityChecked.innerText = '';
+    zipCodeChecked.innerText = '';
+    mailChecked.innerText = '';
+    passChecked.innerText = '';
+    document.getElementById('signup-checked').innerText = '';
 });
 
 window.onload = function(){
