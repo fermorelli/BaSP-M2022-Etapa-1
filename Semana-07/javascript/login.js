@@ -50,11 +50,9 @@ password.addEventListener('blur', function(){
             alertPass.style.display = 'none';
         }else if(passValue.length == 0){
             password.classList.add('negation');
-            alertPass.style.color = 'red';
             alertPass.innerText = 'Field is required';
         }else{
             password.classList.add('negation');
-            alertPass.style.color = 'red';
             alertPass.innerText = 'You must enter a valid password format';
         }
 });

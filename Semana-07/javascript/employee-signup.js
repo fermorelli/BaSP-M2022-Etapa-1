@@ -68,7 +68,7 @@ nameForm.addEventListener('blur', function(){
         alertName.innerText = 'Field is required';
     }else{
         nameForm.classList.add('negation');
-        alertName.innerText = 'You must enter a valid name format';
+        alertName.innerText = 'You must enter a valid name';
     }
 });
 
@@ -96,7 +96,7 @@ surname.addEventListener('blur', function(){
         alertSurname.innerText = 'Field is required';
     }else{
         surname.classList.add('negation');
-        alertSurname.innerText = 'You must enter a valid surname format';
+        alertSurname.innerText = 'You must enter a valid surname';
     }
 });
 
@@ -270,7 +270,7 @@ zipCode.addEventListener('blur', function(){
         alertZipCode.innerText = 'Field is required';
     }else{
         zipCode.classList.add('negation');
-        alertZipCode.innerText = 'You must enter a valid zip code number';
+        alertZipCode.innerText = 'You must enter a valid zip code';
     }
 });
 
@@ -293,7 +293,7 @@ mail.addEventListener('blur', function(){
     }else{
         mail.classList.remove('validation');
         mail.classList.add('negation');
-        alertMail.innerText = 'You must enter a valid email format'
+        alertMail.innerText = 'You must enter a valid email'
     }
 });
 
@@ -323,7 +323,7 @@ password.addEventListener('blur', function(){
         alertPass.innerText = 'Field is required';
     }else{
         password.classList.add('negation');
-        alertPass.innerText = 'You must enter a valid password format';
+        alertPass.innerText = 'You must enter a valid password';
     }
 });
 
@@ -357,7 +357,7 @@ rePassword.addEventListener('blur', function(){
         alertRePass.innerText = 'Password do not match';
     }else{
         rePassword.classList.add('negation');
-        alertRePass.innerText = 'You must enter a valid password format';
+        alertRePass.innerText = 'You must enter a valid password';
     }
 });
 

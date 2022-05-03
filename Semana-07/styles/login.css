@@ -95,4 +95,6 @@
 .login-form div{
       font-size: 12px;
       height: 15px;
+      color: red;
+      font-style: italic;
 }
