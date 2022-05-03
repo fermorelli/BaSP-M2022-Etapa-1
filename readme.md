@@ -24,3 +24,7 @@ In this week assignment I've to make six differents types of JavaScript exercise
 ## Week 06:
 
 In this week assignment I've created the 'log in' and 'sign up' pages that we have made in Figma on the first week. I've made the necessary forms and also created the differens .js files to add the logic behind the forms. On top of that, I made some changes in the HTML file to make posible to navigate between the 3 pages(landing,log in, sign up). Here's the link to visualize this week project: https://ilcosme.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index.html
+
+## Week 07:
+
+This week I worked with the fetch function and sending and receiveing data from an API. I've updated the login and sign up form, to be able to once the validation has been checked, send data to an URL and validate both the login and the sing up process to create a new employee. Also I saved that data on the local storage, and then I made the necessary code to retrieve that data on each input of the form. On top of that I've corrected what was pointed out on last week assingment, more precisely some js validations and the general style of both pages. You can visualize this week work with this link: https://ilcosme.github.io/BaSP-M2022-Etapa-1/Semana-07/views

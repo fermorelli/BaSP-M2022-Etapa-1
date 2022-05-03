@@ -508,7 +508,6 @@ window.onload = function(){
     console.log('aparezco')
     if(localStorage.length > 0){
         var newUserOnLoad = JSON.parse(localStorage.getItem('user:'));
-        console.log(newUserOnLoad);
         nameForm.value = newUserOnLoad.Name;
         surname.value = newUserOnLoad.LastName;
         dni.value = newUserOnLoad.Dni;
