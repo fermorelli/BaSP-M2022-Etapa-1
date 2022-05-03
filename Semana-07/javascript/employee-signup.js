@@ -505,7 +505,6 @@ button2.addEventListener('click', function(){
 });
 
 window.onload = function(){
-    console.log('aparezco')
     if(localStorage.length > 0){
         var newUserOnLoad = JSON.parse(localStorage.getItem('user:'));
         nameForm.value = newUserOnLoad.Name;
